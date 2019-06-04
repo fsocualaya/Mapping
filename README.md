@@ -7,8 +7,8 @@
     * [ ] Graham Scan
     * [ ] Quick Hull
     
-    [//] Kirckpatrick and Seidel's algorithm
-    [//] Randomized Algorithms
+    [comment] Kirckpatrick and Seidel's algorithm
+    [comment] Randomized Algorithms
 
 - Convex Hull
     * [ ] Worst Case
