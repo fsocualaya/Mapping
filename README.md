@@ -2,7 +2,7 @@
 
 ## TODO
 
-- Voronoi Diagram
+- Convex Hull 
     * [ ] Jarvis algorithm
     * [ ] Graham Scan
     * [ ] Quick Hull
@@ -10,7 +10,7 @@
     [comment]: <> (Kirckpatrick and Seidel's algorithm)
     [comment]: <> (Randomized Algorithms)
 
-- Convex Hull
+- Voronoi Diagram
     * [ ] Worst Case
     * [ ] Mid Case
     * [ ] Best Case
