@@ -3,9 +3,12 @@
 ## TODO
 
 - Voronoi Diagram
-    * [ ] Worst Case
-    * [ ] Mid Case
-    * [ ] Best Case
+    * [ ] Jarvis algorithm
+    * [ ] Graham Scan
+    * [ ] Quick Hull
+    
+    [//] Kirckpatrick and Seidel's algorithm
+    [//] Randomized Algorithms
 
 - Convex Hull
     * [ ] Worst Case
@@ -14,6 +17,6 @@
 
 ## Dev Team
 - Ian Arias(@ian-ariassch)
-- Fernando De los Heros(@Nandus)
+- Fernando De los Heros(@Nadnus)
 - Bryan Diaz(@bdiaz22)
 - Fernando Socualaya(@fsocualaya)  
