@@ -16,13 +16,6 @@ public:
     this->y = y;
   }
 
-  bool operator!=(Point q)
-  {
-    if (x == q.x && y == q.y)
-      return 0;
-    return 1;
-  }
-
   bool operator==(Point q) {
       if(x == q.x && y == q.y)
          return 1;
@@ -107,7 +100,7 @@ vector<Point> jarvisAlgorithm(Point points[], int n)
       outputHull.push_back(*it);
     }
 
-    if(nextPoint == start)        //when next point is start it means, the area covered
+    if(nextPoint == start)
          break;
     outputHull.push_back(nextPoint);
     current = nextPoint;
@@ -120,7 +113,7 @@ int main(int argc, char const *argv[]) {
    Point points[] = {{-7,8},{-4,6},{2,6},{6,4},{8,6},{7,-2},{4,-6},{8,-7},{0,0},
       {3,-2},{6,-10},{0,-6},{-9,-5},{-8,-2},{-8,0},{-10,3},{-2,2},{-10,4}};
    int n = 18;
-   std::vector<Point> result;
+   vector<Point> result;
    result = jarvisAlgorithm(points, n);
    cout << "Boundary points of convex hull are: "<<endl;
    vector<Point>::iterator it;
