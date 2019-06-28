@@ -1,0 +1,5 @@
+<!DOCTYPE RCC><RCC version="1.0">
+<qresource prefix="/">
+<file alias="datagrande.txt">/home/fernando/Desktop/adaFinalFinal/qt/datagrande.txt</file>
+</qresource>
+</RCC>
