@@ -17,7 +17,7 @@ CXX           = g++
 DEFINES       = -DQT_DEPRECATED_WARNINGS -DQT_QML_DEBUG -DQT_LOCATION_LIB -DQT_POSITIONINGQUICK_LIB -DQT_QUICK_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_POSITIONING_LIB -DQT_CORE_LIB
 CFLAGS        = -pipe -g -Wall -W -D_REENTRANT -fPIC $(DEFINES)
 CXXFLAGS      = -pipe -g -std=gnu++11 -Wall -W -D_REENTRANT -fPIC $(DEFINES)
-INCPATH       = -I. -I../../../Felgo/Felgo/gcc_64/include -I../../../Felgo/Felgo/gcc_64/include/QtLocation -I../../../Felgo/Felgo/gcc_64/include/QtPositioningQuick -I../../../Felgo/Felgo/gcc_64/include/QtQuick -I../../../Felgo/Felgo/gcc_64/include/QtGui -I../../../Felgo/Felgo/gcc_64/include/QtQml -I../../../Felgo/Felgo/gcc_64/include/QtNetwork -I../../../Felgo/Felgo/gcc_64/include/QtPositioning -I../../../Felgo/Felgo/gcc_64/include/QtCore -I. -isystem /usr/include/libdrm -I../../../Felgo/Felgo/gcc_64/mkspecs/linux-g++
+INCPATH       = -I. -I../../../../Felgo/Felgo/gcc_64/include -I../../../../Felgo/Felgo/gcc_64/include/QtLocation -I../../../../Felgo/Felgo/gcc_64/include/QtPositioningQuick -I../../../../Felgo/Felgo/gcc_64/include/QtQuick -I../../../../Felgo/Felgo/gcc_64/include/QtGui -I../../../../Felgo/Felgo/gcc_64/include/QtQml -I../../../../Felgo/Felgo/gcc_64/include/QtNetwork -I../../../../Felgo/Felgo/gcc_64/include/QtPositioning -I../../../../Felgo/Felgo/gcc_64/include/QtCore -I. -isystem /usr/include/libdrm -I../../../../Felgo/Felgo/gcc_64/mkspecs/linux-g++
 QMAKE         = /home/fernando/Felgo/Felgo/gcc_64/bin/qmake
 DEL_FILE      = rm -f
 CHK_DIR_EXISTS= test -d
@@ -37,7 +37,7 @@ MOVE          = mv -f
 TAR           = tar -cf
 COMPRESS      = gzip -9f
 DISTNAME      = ADA-11.0.0
-DISTDIR = /home/fernando/Desktop/adaFinalFinal/qt/.tmp/ADA-11.0.0
+DISTDIR = /home/fernando/Desktop/adaFinalFinal/Mapping/qt/.tmp/ADA-11.0.0
 LINK          = g++
 LFLAGS        = -Wl,-rpath,/home/fernando/Felgo/Felgo/gcc_64/lib
 LIBS          = $(SUBLIBS) -L/home/fernando/Felgo/Felgo/gcc_64/lib -lQt5Location -lQt5PositioningQuick -lQt5Quick -lQt5Gui -lQt5Qml -lQt5Network -lQt5Positioning -lQt5Core -lGL -lpthread   
@@ -65,199 +65,200 @@ OBJECTS       = main.o \
 		qrc_qmake_qmake_immediate.o \
 		moc_grafoaqt.o \
 		moc_circulo.o
-DIST          = ../../../Felgo/Felgo/gcc_64/mkspecs/features/spec_pre.prf \
-		../../../Felgo/Felgo/gcc_64/mkspecs/common/unix.conf \
-		../../../Felgo/Felgo/gcc_64/mkspecs/common/linux.conf \
-		../../../Felgo/Felgo/gcc_64/mkspecs/common/sanitize.conf \
-		../../../Felgo/Felgo/gcc_64/mkspecs/common/gcc-base.conf \
-		../../../Felgo/Felgo/gcc_64/mkspecs/common/gcc-base-unix.conf \
-		../../../Felgo/Felgo/gcc_64/mkspecs/common/g++-base.conf \
-		../../../Felgo/Felgo/gcc_64/mkspecs/common/g++-unix.conf \
-		../../../Felgo/Felgo/gcc_64/mkspecs/qconfig.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3danimation.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3danimation_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dcore.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dcore_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dextras.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dextras_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dinput.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dinput_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dlogic.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dlogic_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dquick.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dquick_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dquickanimation.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dquickanimation_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dquickextras.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dquickextras_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dquickinput.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dquickinput_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dquickrender.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dquickrender_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dquickscene2d.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dquickscene2d_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3drender.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3drender_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_accessibility_support_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_bluetooth.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_bluetooth_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_bootstrap_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_charts.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_charts_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_concurrent.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_concurrent_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_core.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_core_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_datavisualization.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_datavisualization_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_dbus.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_dbus_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_designer.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_designer_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_designercomponents_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_devicediscovery_support_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_edid_support_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_egl_support_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_eglfs_kms_support_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_eglfsdeviceintegration_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_eventdispatcher_support_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_fb_support_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_fontdatabase_support_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_gamepad.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_gamepad_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_glx_support_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_gui.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_gui_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_help.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_help_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_input_support_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_kms_support_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_linuxaccessibility_support_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_location.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_location_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_multimedia.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_multimedia_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_multimediagsttools_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_multimediawidgets.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_multimediawidgets_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_network.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_network_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_networkauth.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_networkauth_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_nfc.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_nfc_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_opengl.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_opengl_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_openglextensions.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_openglextensions_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_packetprotocol_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_platformcompositor_support_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_positioning.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_positioning_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_positioningquick.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_positioningquick_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_printsupport.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_printsupport_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_purchasing.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_purchasing_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_qml.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_qml_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_qmldebug_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_qmldevtools_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_qmltest.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_qmltest_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_qtmultimediaquicktools_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_quick.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_quick_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_quickcontrols2.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_quickcontrols2_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_quickparticles_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_quickshapes_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_quicktemplates2.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_quicktemplates2_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_quickwidgets.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_quickwidgets_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_remoteobjects.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_remoteobjects_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_repparser.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_repparser_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_scxml.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_scxml_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_sensors.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_sensors_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_serialbus.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_serialbus_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_serialport.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_serialport_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_service_support_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_sql.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_sql_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_svg.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_svg_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_testlib.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_testlib_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_texttospeech.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_texttospeech_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_theme_support_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_uiplugin.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_uitools.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_uitools_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_virtualkeyboard.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_virtualkeyboard_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_waylandclient.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_waylandclient_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_waylandcompositor.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_waylandcompositor_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_webchannel.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_webchannel_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_webengine.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_webengine_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_webenginecore.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_webenginecore_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_webenginecoreheaders_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_webenginewidgets.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_webenginewidgets_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_websockets.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_websockets_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_webview.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_webview_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_widgets.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_widgets_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_x11extras.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_x11extras_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_xcb_qpa_lib_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_xml.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_xml_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_xmlpatterns.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_xmlpatterns_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/features/qt_functions.prf \
-		../../../Felgo/Felgo/gcc_64/mkspecs/features/qt_config.prf \
-		../../../Felgo/Felgo/gcc_64/mkspecs/linux-g++/qmake.conf \
-		../../../Felgo/Felgo/gcc_64/mkspecs/features/spec_post.prf \
-		../../../Felgo/Felgo/gcc_64/mkspecs/features/exclusive_builds.prf \
-		../../../Felgo/Felgo/gcc_64/mkspecs/features/toolchain.prf \
-		../../../Felgo/Felgo/gcc_64/mkspecs/features/default_pre.prf \
-		../../../Felgo/Felgo/gcc_64/mkspecs/features/resolve_config.prf \
-		../../../Felgo/Felgo/gcc_64/mkspecs/features/default_post.prf \
-		../../../Felgo/Felgo/gcc_64/mkspecs/features/qml_debug.prf \
-		../../../Felgo/Felgo/gcc_64/mkspecs/features/warn_on.prf \
-		../../../Felgo/Felgo/gcc_64/mkspecs/features/qt.prf \
-		../../../Felgo/Felgo/gcc_64/mkspecs/features/resources.prf \
-		../../../Felgo/Felgo/gcc_64/mkspecs/features/moc.prf \
-		../../../Felgo/Felgo/gcc_64/mkspecs/features/unix/opengl.prf \
-		../../../Felgo/Felgo/gcc_64/mkspecs/features/unix/thread.prf \
-		../../../Felgo/Felgo/gcc_64/mkspecs/features/qmake_use.prf \
-		../../../Felgo/Felgo/gcc_64/mkspecs/features/file_copies.prf \
-		../../../Felgo/Felgo/gcc_64/mkspecs/features/testcase_targets.prf \
-		../../../Felgo/Felgo/gcc_64/mkspecs/features/exceptions.prf \
-		../../../Felgo/Felgo/gcc_64/mkspecs/features/yacc.prf \
-		../../../Felgo/Felgo/gcc_64/mkspecs/features/lex.prf \
+DIST          = ../../../../Felgo/Felgo/gcc_64/mkspecs/features/spec_pre.prf \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/common/unix.conf \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/common/linux.conf \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/common/sanitize.conf \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/common/gcc-base.conf \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/common/gcc-base-unix.conf \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/common/g++-base.conf \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/common/g++-unix.conf \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/qconfig.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3danimation.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3danimation_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dcore.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dcore_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dextras.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dextras_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dinput.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dinput_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dlogic.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dlogic_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dquick.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dquick_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dquickanimation.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dquickanimation_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dquickextras.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dquickextras_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dquickinput.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dquickinput_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dquickrender.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dquickrender_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dquickscene2d.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dquickscene2d_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3drender.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3drender_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_accessibility_support_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_bluetooth.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_bluetooth_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_bootstrap_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_charts.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_charts_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_concurrent.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_concurrent_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_core.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_core_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_datavisualization.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_datavisualization_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_dbus.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_dbus_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_designer.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_designer_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_designercomponents_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_devicediscovery_support_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_edid_support_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_egl_support_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_eglfs_kms_support_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_eglfsdeviceintegration_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_eventdispatcher_support_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_fb_support_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_fontdatabase_support_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_gamepad.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_gamepad_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_glx_support_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_gui.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_gui_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_help.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_help_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_input_support_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_kms_support_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_linuxaccessibility_support_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_location.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_location_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_multimedia.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_multimedia_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_multimediagsttools_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_multimediawidgets.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_multimediawidgets_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_network.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_network_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_networkauth.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_networkauth_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_nfc.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_nfc_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_opengl.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_opengl_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_openglextensions.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_openglextensions_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_packetprotocol_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_platformcompositor_support_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_positioning.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_positioning_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_positioningquick.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_positioningquick_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_printsupport.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_printsupport_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_purchasing.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_purchasing_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_qml.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_qml_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_qmldebug_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_qmldevtools_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_qmltest.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_qmltest_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_qtmultimediaquicktools_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_quick.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_quick_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_quickcontrols2.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_quickcontrols2_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_quickparticles_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_quickshapes_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_quicktemplates2.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_quicktemplates2_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_quickwidgets.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_quickwidgets_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_remoteobjects.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_remoteobjects_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_repparser.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_repparser_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_scxml.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_scxml_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_sensors.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_sensors_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_serialbus.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_serialbus_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_serialport.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_serialport_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_service_support_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_sql.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_sql_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_svg.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_svg_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_testlib.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_testlib_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_texttospeech.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_texttospeech_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_theme_support_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_uiplugin.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_uitools.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_uitools_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_virtualkeyboard.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_virtualkeyboard_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_waylandclient.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_waylandclient_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_waylandcompositor.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_waylandcompositor_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_webchannel.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_webchannel_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_webengine.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_webengine_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_webenginecore.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_webenginecore_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_webenginecoreheaders_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_webenginewidgets.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_webenginewidgets_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_websockets.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_websockets_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_webview.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_webview_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_widgets.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_widgets_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_x11extras.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_x11extras_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_xcb_qpa_lib_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_xml.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_xml_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_xmlpatterns.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_xmlpatterns_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/features/qt_functions.prf \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/features/qt_config.prf \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/linux-g++/qmake.conf \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/features/spec_post.prf \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/features/exclusive_builds.prf \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/features/toolchain.prf \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/features/default_pre.prf \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/features/resolve_config.prf \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/features/default_post.prf \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/features/qml_debug.prf \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/features/warn_on.prf \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/features/qt.prf \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/features/resources.prf \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/features/moc.prf \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/features/unix/opengl.prf \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/features/unix/thread.prf \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/features/qmake_use.prf \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/features/file_copies.prf \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/features/testcase_targets.prf \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/features/exceptions.prf \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/features/yacc.prf \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/features/lex.prf \
 		ADA-1.pro grafoaqt.h \
 		circulo.h \
 		myThread.h \
 		graph.h \
 		read.h \
-		node.h main.cpp \
+		node.h \
+		voronoi.h main.cpp \
 		circulo.cpp \
 		myThread.cpp
 QMAKE_TARGET  = ADA-1
@@ -271,403 +272,403 @@ first: all
 ADA-1:  $(OBJECTS)  
 	$(LINK) $(LFLAGS) -o $(TARGET) $(OBJECTS) $(OBJCOMP) $(LIBS)
 
-Makefile: ADA-1.pro ../../../Felgo/Felgo/gcc_64/mkspecs/linux-g++/qmake.conf ../../../Felgo/Felgo/gcc_64/mkspecs/features/spec_pre.prf \
-		../../../Felgo/Felgo/gcc_64/mkspecs/common/unix.conf \
-		../../../Felgo/Felgo/gcc_64/mkspecs/common/linux.conf \
-		../../../Felgo/Felgo/gcc_64/mkspecs/common/sanitize.conf \
-		../../../Felgo/Felgo/gcc_64/mkspecs/common/gcc-base.conf \
-		../../../Felgo/Felgo/gcc_64/mkspecs/common/gcc-base-unix.conf \
-		../../../Felgo/Felgo/gcc_64/mkspecs/common/g++-base.conf \
-		../../../Felgo/Felgo/gcc_64/mkspecs/common/g++-unix.conf \
-		../../../Felgo/Felgo/gcc_64/mkspecs/qconfig.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3danimation.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3danimation_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dcore.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dcore_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dextras.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dextras_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dinput.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dinput_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dlogic.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dlogic_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dquick.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dquick_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dquickanimation.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dquickanimation_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dquickextras.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dquickextras_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dquickinput.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dquickinput_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dquickrender.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dquickrender_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dquickscene2d.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dquickscene2d_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3drender.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3drender_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_accessibility_support_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_bluetooth.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_bluetooth_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_bootstrap_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_charts.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_charts_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_concurrent.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_concurrent_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_core.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_core_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_datavisualization.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_datavisualization_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_dbus.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_dbus_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_designer.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_designer_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_designercomponents_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_devicediscovery_support_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_edid_support_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_egl_support_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_eglfs_kms_support_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_eglfsdeviceintegration_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_eventdispatcher_support_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_fb_support_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_fontdatabase_support_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_gamepad.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_gamepad_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_glx_support_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_gui.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_gui_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_help.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_help_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_input_support_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_kms_support_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_linuxaccessibility_support_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_location.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_location_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_multimedia.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_multimedia_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_multimediagsttools_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_multimediawidgets.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_multimediawidgets_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_network.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_network_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_networkauth.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_networkauth_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_nfc.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_nfc_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_opengl.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_opengl_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_openglextensions.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_openglextensions_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_packetprotocol_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_platformcompositor_support_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_positioning.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_positioning_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_positioningquick.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_positioningquick_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_printsupport.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_printsupport_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_purchasing.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_purchasing_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_qml.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_qml_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_qmldebug_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_qmldevtools_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_qmltest.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_qmltest_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_qtmultimediaquicktools_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_quick.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_quick_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_quickcontrols2.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_quickcontrols2_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_quickparticles_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_quickshapes_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_quicktemplates2.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_quicktemplates2_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_quickwidgets.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_quickwidgets_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_remoteobjects.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_remoteobjects_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_repparser.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_repparser_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_scxml.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_scxml_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_sensors.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_sensors_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_serialbus.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_serialbus_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_serialport.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_serialport_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_service_support_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_sql.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_sql_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_svg.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_svg_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_testlib.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_testlib_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_texttospeech.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_texttospeech_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_theme_support_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_uiplugin.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_uitools.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_uitools_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_virtualkeyboard.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_virtualkeyboard_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_waylandclient.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_waylandclient_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_waylandcompositor.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_waylandcompositor_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_webchannel.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_webchannel_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_webengine.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_webengine_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_webenginecore.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_webenginecore_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_webenginecoreheaders_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_webenginewidgets.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_webenginewidgets_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_websockets.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_websockets_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_webview.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_webview_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_widgets.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_widgets_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_x11extras.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_x11extras_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_xcb_qpa_lib_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_xml.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_xml_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_xmlpatterns.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_xmlpatterns_private.pri \
-		../../../Felgo/Felgo/gcc_64/mkspecs/features/qt_functions.prf \
-		../../../Felgo/Felgo/gcc_64/mkspecs/features/qt_config.prf \
-		../../../Felgo/Felgo/gcc_64/mkspecs/linux-g++/qmake.conf \
-		../../../Felgo/Felgo/gcc_64/mkspecs/features/spec_post.prf \
-		../../../Felgo/Felgo/gcc_64/mkspecs/features/exclusive_builds.prf \
-		../../../Felgo/Felgo/gcc_64/mkspecs/features/toolchain.prf \
-		../../../Felgo/Felgo/gcc_64/mkspecs/features/default_pre.prf \
-		../../../Felgo/Felgo/gcc_64/mkspecs/features/resolve_config.prf \
-		../../../Felgo/Felgo/gcc_64/mkspecs/features/default_post.prf \
-		../../../Felgo/Felgo/gcc_64/mkspecs/features/qml_debug.prf \
-		../../../Felgo/Felgo/gcc_64/mkspecs/features/warn_on.prf \
-		../../../Felgo/Felgo/gcc_64/mkspecs/features/qt.prf \
-		../../../Felgo/Felgo/gcc_64/mkspecs/features/resources.prf \
-		../../../Felgo/Felgo/gcc_64/mkspecs/features/moc.prf \
-		../../../Felgo/Felgo/gcc_64/mkspecs/features/unix/opengl.prf \
-		../../../Felgo/Felgo/gcc_64/mkspecs/features/unix/thread.prf \
-		../../../Felgo/Felgo/gcc_64/mkspecs/features/qmake_use.prf \
-		../../../Felgo/Felgo/gcc_64/mkspecs/features/file_copies.prf \
-		../../../Felgo/Felgo/gcc_64/mkspecs/features/testcase_targets.prf \
-		../../../Felgo/Felgo/gcc_64/mkspecs/features/exceptions.prf \
-		../../../Felgo/Felgo/gcc_64/mkspecs/features/yacc.prf \
-		../../../Felgo/Felgo/gcc_64/mkspecs/features/lex.prf \
+Makefile: ADA-1.pro ../../../../Felgo/Felgo/gcc_64/mkspecs/linux-g++/qmake.conf ../../../../Felgo/Felgo/gcc_64/mkspecs/features/spec_pre.prf \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/common/unix.conf \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/common/linux.conf \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/common/sanitize.conf \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/common/gcc-base.conf \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/common/gcc-base-unix.conf \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/common/g++-base.conf \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/common/g++-unix.conf \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/qconfig.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3danimation.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3danimation_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dcore.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dcore_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dextras.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dextras_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dinput.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dinput_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dlogic.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dlogic_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dquick.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dquick_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dquickanimation.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dquickanimation_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dquickextras.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dquickextras_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dquickinput.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dquickinput_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dquickrender.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dquickrender_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dquickscene2d.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dquickscene2d_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3drender.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3drender_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_accessibility_support_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_bluetooth.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_bluetooth_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_bootstrap_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_charts.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_charts_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_concurrent.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_concurrent_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_core.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_core_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_datavisualization.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_datavisualization_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_dbus.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_dbus_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_designer.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_designer_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_designercomponents_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_devicediscovery_support_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_edid_support_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_egl_support_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_eglfs_kms_support_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_eglfsdeviceintegration_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_eventdispatcher_support_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_fb_support_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_fontdatabase_support_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_gamepad.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_gamepad_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_glx_support_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_gui.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_gui_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_help.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_help_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_input_support_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_kms_support_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_linuxaccessibility_support_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_location.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_location_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_multimedia.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_multimedia_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_multimediagsttools_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_multimediawidgets.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_multimediawidgets_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_network.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_network_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_networkauth.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_networkauth_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_nfc.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_nfc_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_opengl.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_opengl_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_openglextensions.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_openglextensions_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_packetprotocol_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_platformcompositor_support_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_positioning.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_positioning_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_positioningquick.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_positioningquick_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_printsupport.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_printsupport_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_purchasing.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_purchasing_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_qml.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_qml_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_qmldebug_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_qmldevtools_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_qmltest.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_qmltest_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_qtmultimediaquicktools_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_quick.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_quick_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_quickcontrols2.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_quickcontrols2_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_quickparticles_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_quickshapes_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_quicktemplates2.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_quicktemplates2_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_quickwidgets.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_quickwidgets_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_remoteobjects.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_remoteobjects_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_repparser.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_repparser_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_scxml.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_scxml_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_sensors.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_sensors_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_serialbus.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_serialbus_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_serialport.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_serialport_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_service_support_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_sql.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_sql_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_svg.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_svg_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_testlib.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_testlib_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_texttospeech.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_texttospeech_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_theme_support_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_uiplugin.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_uitools.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_uitools_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_virtualkeyboard.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_virtualkeyboard_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_waylandclient.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_waylandclient_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_waylandcompositor.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_waylandcompositor_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_webchannel.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_webchannel_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_webengine.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_webengine_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_webenginecore.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_webenginecore_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_webenginecoreheaders_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_webenginewidgets.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_webenginewidgets_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_websockets.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_websockets_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_webview.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_webview_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_widgets.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_widgets_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_x11extras.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_x11extras_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_xcb_qpa_lib_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_xml.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_xml_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_xmlpatterns.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_xmlpatterns_private.pri \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/features/qt_functions.prf \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/features/qt_config.prf \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/linux-g++/qmake.conf \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/features/spec_post.prf \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/features/exclusive_builds.prf \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/features/toolchain.prf \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/features/default_pre.prf \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/features/resolve_config.prf \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/features/default_post.prf \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/features/qml_debug.prf \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/features/warn_on.prf \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/features/qt.prf \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/features/resources.prf \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/features/moc.prf \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/features/unix/opengl.prf \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/features/unix/thread.prf \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/features/qmake_use.prf \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/features/file_copies.prf \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/features/testcase_targets.prf \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/features/exceptions.prf \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/features/yacc.prf \
+		../../../../Felgo/Felgo/gcc_64/mkspecs/features/lex.prf \
 		ADA-1.pro \
 		qml.qrc \
 		qmake_qmake_immediate.qrc \
-		../../../Felgo/Felgo/gcc_64/lib/libQt5Location.prl \
-		../../../Felgo/Felgo/gcc_64/lib/libQt5PositioningQuick.prl \
-		../../../Felgo/Felgo/gcc_64/lib/libQt5Quick.prl \
-		../../../Felgo/Felgo/gcc_64/lib/libQt5Gui.prl \
-		../../../Felgo/Felgo/gcc_64/lib/libQt5Qml.prl \
-		../../../Felgo/Felgo/gcc_64/lib/libQt5Network.prl \
-		../../../Felgo/Felgo/gcc_64/lib/libQt5Positioning.prl \
-		../../../Felgo/Felgo/gcc_64/lib/libQt5Core.prl
+		../../../../Felgo/Felgo/gcc_64/lib/libQt5Location.prl \
+		../../../../Felgo/Felgo/gcc_64/lib/libQt5PositioningQuick.prl \
+		../../../../Felgo/Felgo/gcc_64/lib/libQt5Quick.prl \
+		../../../../Felgo/Felgo/gcc_64/lib/libQt5Gui.prl \
+		../../../../Felgo/Felgo/gcc_64/lib/libQt5Qml.prl \
+		../../../../Felgo/Felgo/gcc_64/lib/libQt5Network.prl \
+		../../../../Felgo/Felgo/gcc_64/lib/libQt5Positioning.prl \
+		../../../../Felgo/Felgo/gcc_64/lib/libQt5Core.prl
 	$(QMAKE) -o Makefile ADA-1.pro -spec linux-g++ CONFIG+=debug CONFIG+=qml_debug
-../../../Felgo/Felgo/gcc_64/mkspecs/features/spec_pre.prf:
-../../../Felgo/Felgo/gcc_64/mkspecs/common/unix.conf:
-../../../Felgo/Felgo/gcc_64/mkspecs/common/linux.conf:
-../../../Felgo/Felgo/gcc_64/mkspecs/common/sanitize.conf:
-../../../Felgo/Felgo/gcc_64/mkspecs/common/gcc-base.conf:
-../../../Felgo/Felgo/gcc_64/mkspecs/common/gcc-base-unix.conf:
-../../../Felgo/Felgo/gcc_64/mkspecs/common/g++-base.conf:
-../../../Felgo/Felgo/gcc_64/mkspecs/common/g++-unix.conf:
-../../../Felgo/Felgo/gcc_64/mkspecs/qconfig.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3danimation.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3danimation_private.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dcore.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dcore_private.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dextras.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dextras_private.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dinput.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dinput_private.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dlogic.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dlogic_private.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dquick.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dquick_private.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dquickanimation.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dquickanimation_private.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dquickextras.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dquickextras_private.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dquickinput.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dquickinput_private.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dquickrender.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dquickrender_private.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dquickscene2d.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dquickscene2d_private.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3drender.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3drender_private.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_accessibility_support_private.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_bluetooth.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_bluetooth_private.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_bootstrap_private.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_charts.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_charts_private.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_concurrent.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_concurrent_private.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_core.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_core_private.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_datavisualization.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_datavisualization_private.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_dbus.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_dbus_private.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_designer.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_designer_private.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_designercomponents_private.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_devicediscovery_support_private.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_edid_support_private.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_egl_support_private.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_eglfs_kms_support_private.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_eglfsdeviceintegration_private.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_eventdispatcher_support_private.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_fb_support_private.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_fontdatabase_support_private.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_gamepad.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_gamepad_private.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_glx_support_private.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_gui.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_gui_private.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_help.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_help_private.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_input_support_private.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_kms_support_private.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_linuxaccessibility_support_private.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_location.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_location_private.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_multimedia.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_multimedia_private.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_multimediagsttools_private.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_multimediawidgets.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_multimediawidgets_private.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_network.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_network_private.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_networkauth.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_networkauth_private.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_nfc.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_nfc_private.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_opengl.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_opengl_private.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_openglextensions.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_openglextensions_private.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_packetprotocol_private.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_platformcompositor_support_private.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_positioning.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_positioning_private.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_positioningquick.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_positioningquick_private.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_printsupport.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_printsupport_private.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_purchasing.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_purchasing_private.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_qml.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_qml_private.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_qmldebug_private.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_qmldevtools_private.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_qmltest.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_qmltest_private.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_qtmultimediaquicktools_private.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_quick.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_quick_private.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_quickcontrols2.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_quickcontrols2_private.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_quickparticles_private.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_quickshapes_private.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_quicktemplates2.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_quicktemplates2_private.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_quickwidgets.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_quickwidgets_private.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_remoteobjects.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_remoteobjects_private.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_repparser.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_repparser_private.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_scxml.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_scxml_private.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_sensors.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_sensors_private.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_serialbus.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_serialbus_private.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_serialport.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_serialport_private.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_service_support_private.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_sql.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_sql_private.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_svg.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_svg_private.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_testlib.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_testlib_private.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_texttospeech.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_texttospeech_private.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_theme_support_private.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_uiplugin.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_uitools.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_uitools_private.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_virtualkeyboard.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_virtualkeyboard_private.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_waylandclient.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_waylandclient_private.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_waylandcompositor.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_waylandcompositor_private.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_webchannel.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_webchannel_private.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_webengine.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_webengine_private.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_webenginecore.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_webenginecore_private.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_webenginecoreheaders_private.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_webenginewidgets.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_webenginewidgets_private.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_websockets.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_websockets_private.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_webview.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_webview_private.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_widgets.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_widgets_private.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_x11extras.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_x11extras_private.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_xcb_qpa_lib_private.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_xml.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_xml_private.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_xmlpatterns.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_xmlpatterns_private.pri:
-../../../Felgo/Felgo/gcc_64/mkspecs/features/qt_functions.prf:
-../../../Felgo/Felgo/gcc_64/mkspecs/features/qt_config.prf:
-../../../Felgo/Felgo/gcc_64/mkspecs/linux-g++/qmake.conf:
-../../../Felgo/Felgo/gcc_64/mkspecs/features/spec_post.prf:
-../../../Felgo/Felgo/gcc_64/mkspecs/features/exclusive_builds.prf:
-../../../Felgo/Felgo/gcc_64/mkspecs/features/toolchain.prf:
-../../../Felgo/Felgo/gcc_64/mkspecs/features/default_pre.prf:
-../../../Felgo/Felgo/gcc_64/mkspecs/features/resolve_config.prf:
-../../../Felgo/Felgo/gcc_64/mkspecs/features/default_post.prf:
-../../../Felgo/Felgo/gcc_64/mkspecs/features/qml_debug.prf:
-../../../Felgo/Felgo/gcc_64/mkspecs/features/warn_on.prf:
-../../../Felgo/Felgo/gcc_64/mkspecs/features/qt.prf:
-../../../Felgo/Felgo/gcc_64/mkspecs/features/resources.prf:
-../../../Felgo/Felgo/gcc_64/mkspecs/features/moc.prf:
-../../../Felgo/Felgo/gcc_64/mkspecs/features/unix/opengl.prf:
-../../../Felgo/Felgo/gcc_64/mkspecs/features/unix/thread.prf:
-../../../Felgo/Felgo/gcc_64/mkspecs/features/qmake_use.prf:
-../../../Felgo/Felgo/gcc_64/mkspecs/features/file_copies.prf:
-../../../Felgo/Felgo/gcc_64/mkspecs/features/testcase_targets.prf:
-../../../Felgo/Felgo/gcc_64/mkspecs/features/exceptions.prf:
-../../../Felgo/Felgo/gcc_64/mkspecs/features/yacc.prf:
-../../../Felgo/Felgo/gcc_64/mkspecs/features/lex.prf:
+../../../../Felgo/Felgo/gcc_64/mkspecs/features/spec_pre.prf:
+../../../../Felgo/Felgo/gcc_64/mkspecs/common/unix.conf:
+../../../../Felgo/Felgo/gcc_64/mkspecs/common/linux.conf:
+../../../../Felgo/Felgo/gcc_64/mkspecs/common/sanitize.conf:
+../../../../Felgo/Felgo/gcc_64/mkspecs/common/gcc-base.conf:
+../../../../Felgo/Felgo/gcc_64/mkspecs/common/gcc-base-unix.conf:
+../../../../Felgo/Felgo/gcc_64/mkspecs/common/g++-base.conf:
+../../../../Felgo/Felgo/gcc_64/mkspecs/common/g++-unix.conf:
+../../../../Felgo/Felgo/gcc_64/mkspecs/qconfig.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3danimation.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3danimation_private.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dcore.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dcore_private.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dextras.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dextras_private.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dinput.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dinput_private.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dlogic.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dlogic_private.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dquick.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dquick_private.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dquickanimation.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dquickanimation_private.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dquickextras.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dquickextras_private.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dquickinput.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dquickinput_private.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dquickrender.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dquickrender_private.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dquickscene2d.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3dquickscene2d_private.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3drender.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_3drender_private.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_accessibility_support_private.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_bluetooth.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_bluetooth_private.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_bootstrap_private.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_charts.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_charts_private.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_concurrent.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_concurrent_private.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_core.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_core_private.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_datavisualization.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_datavisualization_private.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_dbus.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_dbus_private.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_designer.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_designer_private.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_designercomponents_private.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_devicediscovery_support_private.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_edid_support_private.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_egl_support_private.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_eglfs_kms_support_private.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_eglfsdeviceintegration_private.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_eventdispatcher_support_private.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_fb_support_private.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_fontdatabase_support_private.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_gamepad.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_gamepad_private.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_glx_support_private.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_gui.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_gui_private.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_help.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_help_private.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_input_support_private.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_kms_support_private.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_linuxaccessibility_support_private.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_location.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_location_private.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_multimedia.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_multimedia_private.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_multimediagsttools_private.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_multimediawidgets.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_multimediawidgets_private.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_network.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_network_private.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_networkauth.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_networkauth_private.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_nfc.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_nfc_private.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_opengl.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_opengl_private.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_openglextensions.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_openglextensions_private.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_packetprotocol_private.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_platformcompositor_support_private.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_positioning.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_positioning_private.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_positioningquick.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_positioningquick_private.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_printsupport.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_printsupport_private.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_purchasing.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_purchasing_private.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_qml.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_qml_private.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_qmldebug_private.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_qmldevtools_private.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_qmltest.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_qmltest_private.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_qtmultimediaquicktools_private.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_quick.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_quick_private.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_quickcontrols2.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_quickcontrols2_private.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_quickparticles_private.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_quickshapes_private.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_quicktemplates2.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_quicktemplates2_private.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_quickwidgets.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_quickwidgets_private.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_remoteobjects.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_remoteobjects_private.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_repparser.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_repparser_private.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_scxml.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_scxml_private.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_sensors.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_sensors_private.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_serialbus.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_serialbus_private.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_serialport.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_serialport_private.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_service_support_private.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_sql.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_sql_private.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_svg.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_svg_private.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_testlib.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_testlib_private.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_texttospeech.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_texttospeech_private.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_theme_support_private.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_uiplugin.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_uitools.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_uitools_private.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_virtualkeyboard.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_virtualkeyboard_private.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_waylandclient.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_waylandclient_private.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_waylandcompositor.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_waylandcompositor_private.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_webchannel.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_webchannel_private.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_webengine.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_webengine_private.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_webenginecore.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_webenginecore_private.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_webenginecoreheaders_private.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_webenginewidgets.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_webenginewidgets_private.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_websockets.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_websockets_private.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_webview.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_webview_private.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_widgets.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_widgets_private.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_x11extras.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_x11extras_private.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_xcb_qpa_lib_private.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_xml.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_xml_private.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_xmlpatterns.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/modules/qt_lib_xmlpatterns_private.pri:
+../../../../Felgo/Felgo/gcc_64/mkspecs/features/qt_functions.prf:
+../../../../Felgo/Felgo/gcc_64/mkspecs/features/qt_config.prf:
+../../../../Felgo/Felgo/gcc_64/mkspecs/linux-g++/qmake.conf:
+../../../../Felgo/Felgo/gcc_64/mkspecs/features/spec_post.prf:
+../../../../Felgo/Felgo/gcc_64/mkspecs/features/exclusive_builds.prf:
+../../../../Felgo/Felgo/gcc_64/mkspecs/features/toolchain.prf:
+../../../../Felgo/Felgo/gcc_64/mkspecs/features/default_pre.prf:
+../../../../Felgo/Felgo/gcc_64/mkspecs/features/resolve_config.prf:
+../../../../Felgo/Felgo/gcc_64/mkspecs/features/default_post.prf:
+../../../../Felgo/Felgo/gcc_64/mkspecs/features/qml_debug.prf:
+../../../../Felgo/Felgo/gcc_64/mkspecs/features/warn_on.prf:
+../../../../Felgo/Felgo/gcc_64/mkspecs/features/qt.prf:
+../../../../Felgo/Felgo/gcc_64/mkspecs/features/resources.prf:
+../../../../Felgo/Felgo/gcc_64/mkspecs/features/moc.prf:
+../../../../Felgo/Felgo/gcc_64/mkspecs/features/unix/opengl.prf:
+../../../../Felgo/Felgo/gcc_64/mkspecs/features/unix/thread.prf:
+../../../../Felgo/Felgo/gcc_64/mkspecs/features/qmake_use.prf:
+../../../../Felgo/Felgo/gcc_64/mkspecs/features/file_copies.prf:
+../../../../Felgo/Felgo/gcc_64/mkspecs/features/testcase_targets.prf:
+../../../../Felgo/Felgo/gcc_64/mkspecs/features/exceptions.prf:
+../../../../Felgo/Felgo/gcc_64/mkspecs/features/yacc.prf:
+../../../../Felgo/Felgo/gcc_64/mkspecs/features/lex.prf:
 ADA-1.pro:
 qml.qrc:
 qmake_qmake_immediate.qrc:
-../../../Felgo/Felgo/gcc_64/lib/libQt5Location.prl:
-../../../Felgo/Felgo/gcc_64/lib/libQt5PositioningQuick.prl:
-../../../Felgo/Felgo/gcc_64/lib/libQt5Quick.prl:
-../../../Felgo/Felgo/gcc_64/lib/libQt5Gui.prl:
-../../../Felgo/Felgo/gcc_64/lib/libQt5Qml.prl:
-../../../Felgo/Felgo/gcc_64/lib/libQt5Network.prl:
-../../../Felgo/Felgo/gcc_64/lib/libQt5Positioning.prl:
-../../../Felgo/Felgo/gcc_64/lib/libQt5Core.prl:
+../../../../Felgo/Felgo/gcc_64/lib/libQt5Location.prl:
+../../../../Felgo/Felgo/gcc_64/lib/libQt5PositioningQuick.prl:
+../../../../Felgo/Felgo/gcc_64/lib/libQt5Quick.prl:
+../../../../Felgo/Felgo/gcc_64/lib/libQt5Gui.prl:
+../../../../Felgo/Felgo/gcc_64/lib/libQt5Qml.prl:
+../../../../Felgo/Felgo/gcc_64/lib/libQt5Network.prl:
+../../../../Felgo/Felgo/gcc_64/lib/libQt5Positioning.prl:
+../../../../Felgo/Felgo/gcc_64/lib/libQt5Core.prl:
 qmake: FORCE
 	@$(QMAKE) -o Makefile ADA-1.pro -spec linux-g++ CONFIG+=debug CONFIG+=qml_debug
 
@@ -683,8 +684,8 @@ distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents qml.qrc qmake_qmake_immediate.qrc $(DISTDIR)/
-	$(COPY_FILE) --parents ../../../Felgo/Felgo/gcc_64/mkspecs/features/data/dummy.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents grafoaqt.h circulo.h myThread.h graph.h read.h node.h $(DISTDIR)/
+	$(COPY_FILE) --parents ../../../../Felgo/Felgo/gcc_64/mkspecs/features/data/dummy.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents grafoaqt.h circulo.h myThread.h graph.h read.h node.h voronoi.h $(DISTDIR)/
 	$(COPY_FILE) --parents main.cpp circulo.cpp myThread.cpp $(DISTDIR)/
 
 
@@ -713,141 +714,141 @@ compiler_rcc_make_all: qrc_qml.cpp qrc_qmake_qmake_immediate.cpp
 compiler_rcc_clean:
 	-$(DEL_FILE) qrc_qml.cpp qrc_qmake_qmake_immediate.cpp
 qrc_qml.cpp: qml.qrc \
-		../../../Felgo/Felgo/gcc_64/bin/rcc \
+		../../../../Felgo/Felgo/gcc_64/bin/rcc \
 		main.qml
 	/home/fernando/Felgo/Felgo/gcc_64/bin/rcc -name qml qml.qrc -o qrc_qml.cpp
 
 qrc_qmake_qmake_immediate.cpp: qmake_qmake_immediate.qrc \
-		../../../Felgo/Felgo/gcc_64/bin/rcc \
+		../../../../Felgo/Felgo/gcc_64/bin/rcc \
 		datagrande.txt
 	/home/fernando/Felgo/Felgo/gcc_64/bin/rcc -name qmake_qmake_immediate qmake_qmake_immediate.qrc -o qrc_qmake_qmake_immediate.cpp
 
 compiler_moc_predefs_make_all: moc_predefs.h
 compiler_moc_predefs_clean:
 	-$(DEL_FILE) moc_predefs.h
-moc_predefs.h: ../../../Felgo/Felgo/gcc_64/mkspecs/features/data/dummy.cpp
-	g++ -pipe -g -std=gnu++11 -Wall -W -dM -E -o moc_predefs.h ../../../Felgo/Felgo/gcc_64/mkspecs/features/data/dummy.cpp
+moc_predefs.h: ../../../../Felgo/Felgo/gcc_64/mkspecs/features/data/dummy.cpp
+	g++ -pipe -g -std=gnu++11 -Wall -W -dM -E -o moc_predefs.h ../../../../Felgo/Felgo/gcc_64/mkspecs/features/data/dummy.cpp
 
 compiler_moc_header_make_all: moc_grafoaqt.cpp moc_circulo.cpp
 compiler_moc_header_clean:
 	-$(DEL_FILE) moc_grafoaqt.cpp moc_circulo.cpp
 moc_grafoaqt.cpp: grafoaqt.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/QObject \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qobject.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qobjectdefs.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qnamespace.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qglobal.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qconfig-bootstrapped.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qconfig.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qtcore-config.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qsystemdetection.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qprocessordetection.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qcompilerdetection.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qtypeinfo.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qsysinfo.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qlogging.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qflags.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qatomic.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qbasicatomic.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qatomic_bootstrap.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qgenericatomic.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qatomic_cxx11.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qatomic_msvc.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qglobalstatic.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qmutex.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qnumeric.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qversiontagging.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qobjectdefs_impl.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qstring.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qchar.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qbytearray.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qrefcount.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qarraydata.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qstringliteral.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qstringalgorithms.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qstringview.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qstringbuilder.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qlist.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qalgorithms.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qiterator.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qhashfunctions.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qpair.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qbytearraylist.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qstringlist.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qregexp.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qstringmatcher.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qcoreevent.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qscopedpointer.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qmetatype.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qvarlengtharray.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qcontainerfwd.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qobject_impl.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/QObject \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qobject.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qobjectdefs.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qnamespace.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qglobal.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qconfig-bootstrapped.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qconfig.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qtcore-config.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qsystemdetection.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qprocessordetection.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qcompilerdetection.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qtypeinfo.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qsysinfo.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qlogging.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qflags.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qatomic.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qbasicatomic.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qatomic_bootstrap.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qgenericatomic.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qatomic_cxx11.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qatomic_msvc.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qglobalstatic.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qmutex.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qnumeric.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qversiontagging.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qobjectdefs_impl.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qstring.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qchar.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qbytearray.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qrefcount.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qarraydata.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qstringliteral.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qstringalgorithms.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qstringview.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qstringbuilder.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qlist.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qalgorithms.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qiterator.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qhashfunctions.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qpair.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qbytearraylist.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qstringlist.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qregexp.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qstringmatcher.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qcoreevent.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qscopedpointer.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qmetatype.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qvarlengtharray.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qcontainerfwd.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qobject_impl.h \
 		moc_predefs.h \
-		../../../Felgo/Felgo/gcc_64/bin/moc
-	/home/fernando/Felgo/Felgo/gcc_64/bin/moc $(DEFINES) --include /home/fernando/Desktop/adaFinalFinal/qt/moc_predefs.h -I/home/fernando/Felgo/Felgo/gcc_64/mkspecs/linux-g++ -I/home/fernando/Desktop/adaFinalFinal/qt -I/home/fernando/Felgo/Felgo/gcc_64/include -I/home/fernando/Felgo/Felgo/gcc_64/include/QtLocation -I/home/fernando/Felgo/Felgo/gcc_64/include/QtPositioningQuick -I/home/fernando/Felgo/Felgo/gcc_64/include/QtQuick -I/home/fernando/Felgo/Felgo/gcc_64/include/QtGui -I/home/fernando/Felgo/Felgo/gcc_64/include/QtQml -I/home/fernando/Felgo/Felgo/gcc_64/include/QtNetwork -I/home/fernando/Felgo/Felgo/gcc_64/include/QtPositioning -I/home/fernando/Felgo/Felgo/gcc_64/include/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include grafoaqt.h -o moc_grafoaqt.cpp
+		../../../../Felgo/Felgo/gcc_64/bin/moc
+	/home/fernando/Felgo/Felgo/gcc_64/bin/moc $(DEFINES) --include /home/fernando/Desktop/adaFinalFinal/Mapping/qt/moc_predefs.h -I/home/fernando/Felgo/Felgo/gcc_64/mkspecs/linux-g++ -I/home/fernando/Desktop/adaFinalFinal/Mapping/qt -I/home/fernando/Felgo/Felgo/gcc_64/include -I/home/fernando/Felgo/Felgo/gcc_64/include/QtLocation -I/home/fernando/Felgo/Felgo/gcc_64/include/QtPositioningQuick -I/home/fernando/Felgo/Felgo/gcc_64/include/QtQuick -I/home/fernando/Felgo/Felgo/gcc_64/include/QtGui -I/home/fernando/Felgo/Felgo/gcc_64/include/QtQml -I/home/fernando/Felgo/Felgo/gcc_64/include/QtNetwork -I/home/fernando/Felgo/Felgo/gcc_64/include/QtPositioning -I/home/fernando/Felgo/Felgo/gcc_64/include/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include grafoaqt.h -o moc_grafoaqt.cpp
 
 moc_circulo.cpp: circulo.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/QObject \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qobject.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qobjectdefs.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qnamespace.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qglobal.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qconfig-bootstrapped.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qconfig.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qtcore-config.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qsystemdetection.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qprocessordetection.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qcompilerdetection.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qtypeinfo.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qsysinfo.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qlogging.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qflags.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qatomic.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qbasicatomic.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qatomic_bootstrap.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qgenericatomic.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qatomic_cxx11.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qatomic_msvc.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qglobalstatic.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qmutex.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qnumeric.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qversiontagging.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qobjectdefs_impl.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qstring.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qchar.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qbytearray.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qrefcount.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qarraydata.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qstringliteral.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qstringalgorithms.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qstringview.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qstringbuilder.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qlist.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qalgorithms.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qiterator.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qhashfunctions.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qpair.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qbytearraylist.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qstringlist.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qregexp.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qstringmatcher.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qcoreevent.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qscopedpointer.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qmetatype.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qvarlengtharray.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qcontainerfwd.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qobject_impl.h \
-		../../../Felgo/Felgo/gcc_64/include/QtPositioning/QGeoCoordinate \
-		../../../Felgo/Felgo/gcc_64/include/QtPositioning/qgeocoordinate.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/QMetaType \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/QString \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/QSharedDataPointer \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qshareddata.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qhash.h \
-		../../../Felgo/Felgo/gcc_64/include/QtPositioning/qpositioningglobal.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/QObject \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qobject.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qobjectdefs.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qnamespace.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qglobal.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qconfig-bootstrapped.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qconfig.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qtcore-config.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qsystemdetection.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qprocessordetection.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qcompilerdetection.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qtypeinfo.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qsysinfo.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qlogging.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qflags.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qatomic.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qbasicatomic.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qatomic_bootstrap.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qgenericatomic.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qatomic_cxx11.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qatomic_msvc.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qglobalstatic.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qmutex.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qnumeric.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qversiontagging.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qobjectdefs_impl.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qstring.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qchar.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qbytearray.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qrefcount.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qarraydata.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qstringliteral.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qstringalgorithms.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qstringview.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qstringbuilder.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qlist.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qalgorithms.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qiterator.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qhashfunctions.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qpair.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qbytearraylist.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qstringlist.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qregexp.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qstringmatcher.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qcoreevent.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qscopedpointer.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qmetatype.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qvarlengtharray.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qcontainerfwd.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qobject_impl.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtPositioning/QGeoCoordinate \
+		../../../../Felgo/Felgo/gcc_64/include/QtPositioning/qgeocoordinate.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/QMetaType \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/QString \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/QSharedDataPointer \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qshareddata.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qhash.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtPositioning/qpositioningglobal.h \
 		moc_predefs.h \
-		../../../Felgo/Felgo/gcc_64/bin/moc
-	/home/fernando/Felgo/Felgo/gcc_64/bin/moc $(DEFINES) --include /home/fernando/Desktop/adaFinalFinal/qt/moc_predefs.h -I/home/fernando/Felgo/Felgo/gcc_64/mkspecs/linux-g++ -I/home/fernando/Desktop/adaFinalFinal/qt -I/home/fernando/Felgo/Felgo/gcc_64/include -I/home/fernando/Felgo/Felgo/gcc_64/include/QtLocation -I/home/fernando/Felgo/Felgo/gcc_64/include/QtPositioningQuick -I/home/fernando/Felgo/Felgo/gcc_64/include/QtQuick -I/home/fernando/Felgo/Felgo/gcc_64/include/QtGui -I/home/fernando/Felgo/Felgo/gcc_64/include/QtQml -I/home/fernando/Felgo/Felgo/gcc_64/include/QtNetwork -I/home/fernando/Felgo/Felgo/gcc_64/include/QtPositioning -I/home/fernando/Felgo/Felgo/gcc_64/include/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include circulo.h -o moc_circulo.cpp
+		../../../../Felgo/Felgo/gcc_64/bin/moc
+	/home/fernando/Felgo/Felgo/gcc_64/bin/moc $(DEFINES) --include /home/fernando/Desktop/adaFinalFinal/Mapping/qt/moc_predefs.h -I/home/fernando/Felgo/Felgo/gcc_64/mkspecs/linux-g++ -I/home/fernando/Desktop/adaFinalFinal/Mapping/qt -I/home/fernando/Felgo/Felgo/gcc_64/include -I/home/fernando/Felgo/Felgo/gcc_64/include/QtLocation -I/home/fernando/Felgo/Felgo/gcc_64/include/QtPositioningQuick -I/home/fernando/Felgo/Felgo/gcc_64/include/QtQuick -I/home/fernando/Felgo/Felgo/gcc_64/include/QtGui -I/home/fernando/Felgo/Felgo/gcc_64/include/QtQml -I/home/fernando/Felgo/Felgo/gcc_64/include/QtNetwork -I/home/fernando/Felgo/Felgo/gcc_64/include/QtPositioning -I/home/fernando/Felgo/Felgo/gcc_64/include/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include circulo.h -o moc_circulo.cpp
 
 compiler_moc_objc_header_make_all:
 compiler_moc_objc_header_clean:
@@ -863,246 +864,248 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 
 ####### Compile
 
-main.o: main.cpp ../../../Felgo/Felgo/gcc_64/include/QtGui/QGuiApplication \
-		../../../Felgo/Felgo/gcc_64/include/QtGui/qguiapplication.h \
-		../../../Felgo/Felgo/gcc_64/include/QtGui/qtguiglobal.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qglobal.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qconfig-bootstrapped.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qconfig.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qtcore-config.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qsystemdetection.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qprocessordetection.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qcompilerdetection.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qtypeinfo.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qsysinfo.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qlogging.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qflags.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qatomic.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qbasicatomic.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qatomic_bootstrap.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qgenericatomic.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qatomic_cxx11.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qatomic_msvc.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qglobalstatic.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qmutex.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qnumeric.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qversiontagging.h \
-		../../../Felgo/Felgo/gcc_64/include/QtGui/qtgui-config.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qcoreapplication.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qstring.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qchar.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qbytearray.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qrefcount.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qnamespace.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qarraydata.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qstringliteral.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qstringalgorithms.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qstringview.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qstringbuilder.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qobject.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qobjectdefs.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qobjectdefs_impl.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qlist.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qalgorithms.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qiterator.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qhashfunctions.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qpair.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qbytearraylist.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qstringlist.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qregexp.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qstringmatcher.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qcoreevent.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qscopedpointer.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qmetatype.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qvarlengtharray.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qcontainerfwd.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qobject_impl.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qeventloop.h \
-		../../../Felgo/Felgo/gcc_64/include/QtGui/qwindowdefs.h \
-		../../../Felgo/Felgo/gcc_64/include/QtGui/qwindowdefs_win.h \
-		../../../Felgo/Felgo/gcc_64/include/QtGui/qinputmethod.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qlocale.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qvariant.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qmap.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qdebug.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qhash.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qtextstream.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qiodevice.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qvector.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qpoint.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qset.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qcontiguouscache.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qsharedpointer.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qshareddata.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qsharedpointer_impl.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qsize.h \
-		../../../Felgo/Felgo/gcc_64/include/QtQml/QQmlApplicationEngine \
-		../../../Felgo/Felgo/gcc_64/include/QtQml/qqmlapplicationengine.h \
-		../../../Felgo/Felgo/gcc_64/include/QtQml/qqmlengine.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qurl.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qurlquery.h \
-		../../../Felgo/Felgo/gcc_64/include/QtQml/qjsengine.h \
-		../../../Felgo/Felgo/gcc_64/include/QtQml/qjsvalue.h \
-		../../../Felgo/Felgo/gcc_64/include/QtQml/qtqmlglobal.h \
-		../../../Felgo/Felgo/gcc_64/include/QtQml/qtqml-config.h \
-		../../../Felgo/Felgo/gcc_64/include/QtNetwork/qtnetworkglobal.h \
-		../../../Felgo/Felgo/gcc_64/include/QtNetwork/qtnetwork-config.h \
-		../../../Felgo/Felgo/gcc_64/include/QtQml/qqmldebug.h \
-		../../../Felgo/Felgo/gcc_64/include/QtQml/qqml.h \
-		../../../Felgo/Felgo/gcc_64/include/QtQml/qqmlprivate.h \
-		../../../Felgo/Felgo/gcc_64/include/QtQml/qqmlparserstatus.h \
-		../../../Felgo/Felgo/gcc_64/include/QtQml/qqmlpropertyvaluesource.h \
-		../../../Felgo/Felgo/gcc_64/include/QtQml/qqmllist.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qmetaobject.h \
-		../../../Felgo/Felgo/gcc_64/include/QtQml/qqmlerror.h \
-		../../../Felgo/Felgo/gcc_64/include/QtLocation/QGeoRoute \
-		../../../Felgo/Felgo/gcc_64/include/QtLocation/qgeoroute.h \
-		../../../Felgo/Felgo/gcc_64/include/QtPositioning/QGeoCoordinate \
-		../../../Felgo/Felgo/gcc_64/include/QtPositioning/qgeocoordinate.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/QMetaType \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/QString \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/QSharedDataPointer \
-		../../../Felgo/Felgo/gcc_64/include/QtPositioning/qpositioningglobal.h \
-		../../../Felgo/Felgo/gcc_64/include/QtLocation/QGeoRouteRequest \
-		../../../Felgo/Felgo/gcc_64/include/QtLocation/qgeorouterequest.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/QList \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/QExplicitlySharedDataPointer \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/QDateTime \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qdatetime.h \
-		../../../Felgo/Felgo/gcc_64/include/QtLocation/qlocationglobal.h \
-		../../../Felgo/Felgo/gcc_64/include/QtLocation/qlocation.h \
-		../../../Felgo/Felgo/gcc_64/include/QtPositioning/qgeorectangle.h \
-		../../../Felgo/Felgo/gcc_64/include/QtPositioning/QGeoShape \
-		../../../Felgo/Felgo/gcc_64/include/QtPositioning/qgeoshape.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/QHash \
-		../../../Felgo/Felgo/gcc_64/include/QtPositioning/QGeoPath \
-		../../../Felgo/Felgo/gcc_64/include/QtPositioning/qgeopath.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/QVariantList \
-		../../../Felgo/Felgo/gcc_64/include/QtQuick/QQuickView \
-		../../../Felgo/Felgo/gcc_64/include/QtQuick/qquickview.h \
-		../../../Felgo/Felgo/gcc_64/include/QtQuick/qquickwindow.h \
-		../../../Felgo/Felgo/gcc_64/include/QtQuick/qtquickglobal.h \
-		../../../Felgo/Felgo/gcc_64/include/QtQuick/qtquick-config.h \
-		../../../Felgo/Felgo/gcc_64/include/QtQuick/qsgrendererinterface.h \
-		../../../Felgo/Felgo/gcc_64/include/QtQuick/qsgnode.h \
-		../../../Felgo/Felgo/gcc_64/include/QtQuick/qsggeometry.h \
-		../../../Felgo/Felgo/gcc_64/include/QtGui/qopengl.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qt_windows.h \
-		../../../Felgo/Felgo/gcc_64/include/QtGui/qopengles2ext.h \
-		../../../Felgo/Felgo/gcc_64/include/QtGui/qopenglext.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/QRectF \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qrect.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qmargins.h \
-		../../../Felgo/Felgo/gcc_64/include/QtGui/QMatrix4x4 \
-		../../../Felgo/Felgo/gcc_64/include/QtGui/qmatrix4x4.h \
-		../../../Felgo/Felgo/gcc_64/include/QtGui/qvector3d.h \
-		../../../Felgo/Felgo/gcc_64/include/QtGui/qvector4d.h \
-		../../../Felgo/Felgo/gcc_64/include/QtGui/qquaternion.h \
-		../../../Felgo/Felgo/gcc_64/include/QtGui/qgenericmatrix.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qdatastream.h \
-		../../../Felgo/Felgo/gcc_64/include/QtGui/qwindow.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/QObject \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/QEvent \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/QMargins \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/QRect \
-		../../../Felgo/Felgo/gcc_64/include/QtGui/qsurface.h \
-		../../../Felgo/Felgo/gcc_64/include/QtGui/qsurfaceformat.h \
-		../../../Felgo/Felgo/gcc_64/include/QtGui/qicon.h \
-		../../../Felgo/Felgo/gcc_64/include/QtGui/qpixmap.h \
-		../../../Felgo/Felgo/gcc_64/include/QtGui/qpaintdevice.h \
-		../../../Felgo/Felgo/gcc_64/include/QtGui/qcolor.h \
-		../../../Felgo/Felgo/gcc_64/include/QtGui/qrgb.h \
-		../../../Felgo/Felgo/gcc_64/include/QtGui/qrgba64.h \
-		../../../Felgo/Felgo/gcc_64/include/QtGui/qimage.h \
-		../../../Felgo/Felgo/gcc_64/include/QtGui/qpixelformat.h \
-		../../../Felgo/Felgo/gcc_64/include/QtGui/qtransform.h \
-		../../../Felgo/Felgo/gcc_64/include/QtGui/qmatrix.h \
-		../../../Felgo/Felgo/gcc_64/include/QtGui/qpolygon.h \
-		../../../Felgo/Felgo/gcc_64/include/QtGui/qregion.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qline.h \
-		../../../Felgo/Felgo/gcc_64/include/QtGui/qpainterpath.h \
-		../../../Felgo/Felgo/gcc_64/include/QtGui/qcursor.h \
-		../../../Felgo/Felgo/gcc_64/include/QtGui/qevent.h \
-		../../../Felgo/Felgo/gcc_64/include/QtGui/qkeysequence.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qfile.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qfiledevice.h \
-		../../../Felgo/Felgo/gcc_64/include/QtGui/qvector2d.h \
-		../../../Felgo/Felgo/gcc_64/include/QtGui/qtouchdevice.h \
-		../../../Felgo/Felgo/gcc_64/include/QtQml/QQmlComponent \
-		../../../Felgo/Felgo/gcc_64/include/QtQml/qqmlcomponent.h \
-		../../../Felgo/Felgo/gcc_64/include/QtQml/QQmlContext \
-		../../../Felgo/Felgo/gcc_64/include/QtQml/qqmlcontext.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/QThread \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qthread.h \
+main.o: main.cpp ../../../../Felgo/Felgo/gcc_64/include/QtGui/QGuiApplication \
+		../../../../Felgo/Felgo/gcc_64/include/QtGui/qguiapplication.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtGui/qtguiglobal.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qglobal.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qconfig-bootstrapped.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qconfig.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qtcore-config.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qsystemdetection.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qprocessordetection.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qcompilerdetection.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qtypeinfo.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qsysinfo.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qlogging.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qflags.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qatomic.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qbasicatomic.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qatomic_bootstrap.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qgenericatomic.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qatomic_cxx11.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qatomic_msvc.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qglobalstatic.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qmutex.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qnumeric.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qversiontagging.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtGui/qtgui-config.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qcoreapplication.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qstring.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qchar.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qbytearray.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qrefcount.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qnamespace.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qarraydata.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qstringliteral.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qstringalgorithms.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qstringview.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qstringbuilder.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qobject.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qobjectdefs.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qobjectdefs_impl.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qlist.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qalgorithms.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qiterator.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qhashfunctions.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qpair.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qbytearraylist.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qstringlist.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qregexp.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qstringmatcher.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qcoreevent.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qscopedpointer.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qmetatype.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qvarlengtharray.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qcontainerfwd.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qobject_impl.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qeventloop.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtGui/qwindowdefs.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtGui/qwindowdefs_win.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtGui/qinputmethod.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qlocale.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qvariant.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qmap.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qdebug.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qhash.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qtextstream.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qiodevice.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qvector.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qpoint.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qset.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qcontiguouscache.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qsharedpointer.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qshareddata.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qsharedpointer_impl.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qsize.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtQml/QQmlApplicationEngine \
+		../../../../Felgo/Felgo/gcc_64/include/QtQml/qqmlapplicationengine.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtQml/qqmlengine.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qurl.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qurlquery.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtQml/qjsengine.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtQml/qjsvalue.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtQml/qtqmlglobal.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtQml/qtqml-config.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtNetwork/qtnetworkglobal.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtNetwork/qtnetwork-config.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtQml/qqmldebug.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtQml/qqml.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtQml/qqmlprivate.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtQml/qqmlparserstatus.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtQml/qqmlpropertyvaluesource.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtQml/qqmllist.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qmetaobject.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtQml/qqmlerror.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtLocation/QGeoRoute \
+		../../../../Felgo/Felgo/gcc_64/include/QtLocation/qgeoroute.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtPositioning/QGeoCoordinate \
+		../../../../Felgo/Felgo/gcc_64/include/QtPositioning/qgeocoordinate.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/QMetaType \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/QString \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/QSharedDataPointer \
+		../../../../Felgo/Felgo/gcc_64/include/QtPositioning/qpositioningglobal.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtLocation/QGeoRouteRequest \
+		../../../../Felgo/Felgo/gcc_64/include/QtLocation/qgeorouterequest.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/QList \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/QExplicitlySharedDataPointer \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/QDateTime \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qdatetime.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtLocation/qlocationglobal.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtLocation/qlocation.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtPositioning/qgeorectangle.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtPositioning/QGeoShape \
+		../../../../Felgo/Felgo/gcc_64/include/QtPositioning/qgeoshape.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/QHash \
+		../../../../Felgo/Felgo/gcc_64/include/QtPositioning/QGeoPath \
+		../../../../Felgo/Felgo/gcc_64/include/QtPositioning/qgeopath.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/QVariantList \
+		../../../../Felgo/Felgo/gcc_64/include/QtQuick/QQuickView \
+		../../../../Felgo/Felgo/gcc_64/include/QtQuick/qquickview.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtQuick/qquickwindow.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtQuick/qtquickglobal.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtQuick/qtquick-config.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtQuick/qsgrendererinterface.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtQuick/qsgnode.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtQuick/qsggeometry.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtGui/qopengl.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qt_windows.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtGui/qopengles2ext.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtGui/qopenglext.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/QRectF \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qrect.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qmargins.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtGui/QMatrix4x4 \
+		../../../../Felgo/Felgo/gcc_64/include/QtGui/qmatrix4x4.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtGui/qvector3d.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtGui/qvector4d.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtGui/qquaternion.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtGui/qgenericmatrix.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qdatastream.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtGui/qwindow.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/QObject \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/QEvent \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/QMargins \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/QRect \
+		../../../../Felgo/Felgo/gcc_64/include/QtGui/qsurface.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtGui/qsurfaceformat.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtGui/qicon.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtGui/qpixmap.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtGui/qpaintdevice.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtGui/qcolor.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtGui/qrgb.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtGui/qrgba64.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtGui/qimage.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtGui/qpixelformat.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtGui/qtransform.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtGui/qmatrix.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtGui/qpolygon.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtGui/qregion.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qline.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtGui/qpainterpath.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtGui/qcursor.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtGui/qevent.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtGui/qkeysequence.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qfile.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qfiledevice.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtGui/qvector2d.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtGui/qtouchdevice.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtQml/QQmlComponent \
+		../../../../Felgo/Felgo/gcc_64/include/QtQml/qqmlcomponent.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtQml/QQmlContext \
+		../../../../Felgo/Felgo/gcc_64/include/QtQml/qqmlcontext.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/QThread \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qthread.h \
 		myThread.h \
 		read.h \
 		graph.h \
 		node.h \
 		edge.h \
 		taxi.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/QAtomicInteger \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/QMutex
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/QAtomicInteger \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/QMutex \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/QFileInfo \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qfileinfo.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o main.cpp
 
 circulo.o: circulo.cpp circulo.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/QObject \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qobject.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qobjectdefs.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qnamespace.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qglobal.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qconfig-bootstrapped.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qconfig.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qtcore-config.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qsystemdetection.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qprocessordetection.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qcompilerdetection.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qtypeinfo.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qsysinfo.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qlogging.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qflags.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qatomic.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qbasicatomic.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qatomic_bootstrap.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qgenericatomic.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qatomic_cxx11.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qatomic_msvc.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qglobalstatic.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qmutex.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qnumeric.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qversiontagging.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qobjectdefs_impl.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qstring.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qchar.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qbytearray.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qrefcount.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qarraydata.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qstringliteral.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qstringalgorithms.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qstringview.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qstringbuilder.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qlist.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qalgorithms.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qiterator.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qhashfunctions.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qpair.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qbytearraylist.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qstringlist.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qregexp.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qstringmatcher.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qcoreevent.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qscopedpointer.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qmetatype.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qvarlengtharray.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qcontainerfwd.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qobject_impl.h \
-		../../../Felgo/Felgo/gcc_64/include/QtPositioning/QGeoCoordinate \
-		../../../Felgo/Felgo/gcc_64/include/QtPositioning/qgeocoordinate.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/QMetaType \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/QString \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/QSharedDataPointer \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qshareddata.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qhash.h \
-		../../../Felgo/Felgo/gcc_64/include/QtPositioning/qpositioningglobal.h
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/QObject \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qobject.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qobjectdefs.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qnamespace.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qglobal.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qconfig-bootstrapped.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qconfig.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qtcore-config.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qsystemdetection.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qprocessordetection.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qcompilerdetection.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qtypeinfo.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qsysinfo.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qlogging.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qflags.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qatomic.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qbasicatomic.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qatomic_bootstrap.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qgenericatomic.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qatomic_cxx11.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qatomic_msvc.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qglobalstatic.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qmutex.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qnumeric.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qversiontagging.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qobjectdefs_impl.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qstring.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qchar.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qbytearray.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qrefcount.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qarraydata.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qstringliteral.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qstringalgorithms.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qstringview.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qstringbuilder.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qlist.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qalgorithms.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qiterator.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qhashfunctions.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qpair.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qbytearraylist.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qstringlist.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qregexp.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qstringmatcher.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qcoreevent.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qscopedpointer.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qmetatype.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qvarlengtharray.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qcontainerfwd.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qobject_impl.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtPositioning/QGeoCoordinate \
+		../../../../Felgo/Felgo/gcc_64/include/QtPositioning/qgeocoordinate.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/QMetaType \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/QString \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/QSharedDataPointer \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qshareddata.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qhash.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtPositioning/qpositioningglobal.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o circulo.o circulo.cpp
 
 myThread.o: myThread.cpp myThread.h \
@@ -1111,59 +1114,59 @@ myThread.o: myThread.cpp myThread.h \
 		node.h \
 		edge.h \
 		taxi.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/QThread \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qthread.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qobject.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qobjectdefs.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qnamespace.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qglobal.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qconfig-bootstrapped.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qconfig.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qtcore-config.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qsystemdetection.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qprocessordetection.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qcompilerdetection.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qtypeinfo.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qsysinfo.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qlogging.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qflags.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qatomic.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qbasicatomic.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qatomic_bootstrap.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qgenericatomic.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qatomic_cxx11.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qatomic_msvc.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qglobalstatic.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qmutex.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qnumeric.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qversiontagging.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qobjectdefs_impl.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qstring.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qchar.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qbytearray.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qrefcount.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qarraydata.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qstringliteral.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qstringalgorithms.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qstringview.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qstringbuilder.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qlist.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qalgorithms.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qiterator.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qhashfunctions.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qpair.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qbytearraylist.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qstringlist.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qregexp.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qstringmatcher.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qcoreevent.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qscopedpointer.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qmetatype.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qvarlengtharray.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qcontainerfwd.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/qobject_impl.h \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/QAtomicInteger \
-		../../../Felgo/Felgo/gcc_64/include/QtCore/QMutex
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/QThread \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qthread.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qobject.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qobjectdefs.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qnamespace.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qglobal.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qconfig-bootstrapped.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qconfig.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qtcore-config.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qsystemdetection.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qprocessordetection.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qcompilerdetection.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qtypeinfo.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qsysinfo.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qlogging.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qflags.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qatomic.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qbasicatomic.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qatomic_bootstrap.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qgenericatomic.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qatomic_cxx11.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qatomic_msvc.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qglobalstatic.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qmutex.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qnumeric.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qversiontagging.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qobjectdefs_impl.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qstring.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qchar.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qbytearray.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qrefcount.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qarraydata.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qstringliteral.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qstringalgorithms.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qstringview.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qstringbuilder.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qlist.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qalgorithms.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qiterator.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qhashfunctions.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qpair.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qbytearraylist.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qstringlist.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qregexp.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qstringmatcher.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qcoreevent.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qscopedpointer.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qmetatype.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qvarlengtharray.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qcontainerfwd.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/qobject_impl.h \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/QAtomicInteger \
+		../../../../Felgo/Felgo/gcc_64/include/QtCore/QMutex
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o myThread.o myThread.cpp
 
 qrc_qml.o: qrc_qml.cpp 

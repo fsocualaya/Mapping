@@ -41,4 +41,6 @@ HEADERS += \
     myThread.h \
     graph.h \
     read.h \
-    node.h
+    node.h \
+    voronoi.h \
+    voronoi.h

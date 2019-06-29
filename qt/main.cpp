@@ -27,12 +27,6 @@
 
 using namespace std::chrono;
 
-
-
-
-
-
-
 //chorrillos 4362423164  miraflores 263615940 lima 791159777
 int main(int argc, char *argv[])
 {
