@@ -3,6 +3,7 @@
 #include <chrono>
 #include <iomanip>
 #include <cmath>
+#include <algorithm>
 #include "Point.h"
 
 using namespace std;
@@ -41,7 +42,7 @@ vector<Point> jarvisAlgorithm(Point points[], int n)
   Point start = points[0];
   vector<Point> outputHull;
 
-  for (size_t i = 0; i < n; i++) {
+  for (int i = 0; i < n; i++) {
     if(points[i].x < start.x)
       start = points[i];
   }
@@ -60,7 +61,7 @@ vector<Point> jarvisAlgorithm(Point points[], int n)
 
       int val = crossProduct(current,nextPoint, points[i]);
 
-        if (val > 0)
+        if (val < 0)
         {
             nextPoint = points[i];
             collinearPoints = new vector<Point>;
