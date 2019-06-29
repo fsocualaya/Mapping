@@ -15,7 +15,7 @@ pair<QGeoCoordinate, QGeoCoordinate> lowerCommonSupportLine(std::vector<QGeoCoor
     //step 1:find the vertex in hull1 with the highest x(Rightmost)
     //there is an O(log n) algorithm for finding the common support by Overmars and Leevwen. But since this sub-problem is not a bottleneck of the total time complexity, following O(n) algorithm is quite enough.
     //mal; chequear que tengo que hacer palos indices
-    unsigned long index1, index2;
+    long index1, index2;
     index1 = 0;
     index2 = 0;
     double max,min;
@@ -42,11 +42,18 @@ pair<QGeoCoordinate, QGeoCoordinate> lowerCommonSupportLine(std::vector<QGeoCoor
     QGeoCoordinate lmost = hull2[index2];
     while(rmost.latitude()< hull1[index1-1].latitude()){
         index1 --;
+
         rmost = hull1[index1];
+        if (index1 == 0){
+            index1 = hull1.size();
+        }
     }
     while(lmost.latitude()< hull2[index2+1].latitude()){
         index2++;
         lmost = hull2[index2];
+        if (index2 == hull2.size()-1){
+            index2 = -1;
+        }
 
     }
     return (make_pair(rmost,lmost));
