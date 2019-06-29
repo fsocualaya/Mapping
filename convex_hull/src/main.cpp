@@ -1,11 +1,22 @@
 #include "jarvis.h"
 
+void removePoints(vector<Point> &result)
+{
+  auto end = result.end();
+  for (auto it = result.begin(); it != end ; it++) {
+    end = std::remove(it+1,end,*it);
+  }
+
+  result.erase(end,result.end());
+}
+
 int main(int argc, char const *argv[]) {
     Point points[] = {{-7,8},{-4,6},{2,6},{6,4},{8,6},{7,-2},{4,-6},{8,-7},{0,0},
       {3,-2},{6,-10},{0,-6},{-9,-5},{-8,-2},{-8,0},{-10,3},{-2,2},{-10,4}};
     int n = 18;
     vector<Point> result;
     result = jarvisAlgorithm(points, n);
+    removePoints(result);
     cout << "Boundary points of convex hull are: "<<endl;
     vector<Point>::iterator it;
 
