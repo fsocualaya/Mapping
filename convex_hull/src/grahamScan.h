@@ -1,3 +1,6 @@
+#ifndef __COMMON_H__
+#define __COMMON_H__
+
 #include "Point.h"
 #include <stack>
 #include <vector>
@@ -78,3 +81,4 @@ pointsVector graham(pointsVector Map){
     grahamHull.push_back(grahamHull[0]);
     return grahamHull;
 }
+#endif
