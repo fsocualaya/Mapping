@@ -12,6 +12,16 @@ typedef Point<double> coordinate;
 
 using namespace std;
 
+void removePoints(vector<coordinate> &result)
+{
+  auto end = result.end();
+  for (auto it = result.begin(); it != end ; it++) {
+    end = std::remove(it+1,end,*it);
+  }
+
+  result.erase(end,result.end());
+}
+
 int crossProduct(coordinate p, coordinate q, coordinate r)
 {
   int x1 = p.x - q.x;
@@ -40,13 +50,13 @@ int distance(coordinate p, coordinate q, coordinate r)
     return 1;
 }
 
-vector<coordinate> jarvisAlgorithm(coordinate points[], int n)
+vector<coordinate> jarvisAlgorithm(vector<coordinate> &points)
 {
 
   coordinate start = points[0];
   vector<coordinate> outputHull;
 
-  for (int i = 0; i < n; i++)
+  for (int i = 0; i < points.size(); i++)
   {
     if (points[i].x < start.x)
       start = points[i];
@@ -61,7 +71,7 @@ vector<coordinate> jarvisAlgorithm(coordinate points[], int n)
   {
     coordinate nextPoint = points[0];
 
-    for (size_t i = 0; i < n; i++)
+    for (size_t i = 0; i < points.size(); i++)
     {
       if (points[i] == current)
         continue;
@@ -97,8 +107,8 @@ vector<coordinate> jarvisAlgorithm(coordinate points[], int n)
       break;
     outputHull.push_back(nextPoint);
     current = nextPoint;
-  }
 
+  }
   return outputHull;
 }
 #endif
