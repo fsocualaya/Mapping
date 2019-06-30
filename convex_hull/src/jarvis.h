@@ -1,3 +1,5 @@
+#ifndef JARVIS_H
+#define JARVIS_H
 #include <iostream>
 #include <vector>
 #include <chrono>
@@ -6,89 +8,97 @@
 #include <algorithm>
 #include "Point.h"
 
+typedef Point<double> coordinate;
+
 using namespace std;
 
-int crossProduct(Point p, Point q, Point r)
+int crossProduct(coordinate p, coordinate q, coordinate r)
 {
   int x1 = p.x - q.x;
   int x2 = p.x - r.x;
   int y1 = p.y - q.y;
   int y2 = p.y - r.y;
 
-  return y2*x1 - y1*x2;
+  return y2 * x1 - y1 * x2;
 }
 
-int distance(Point p, Point q, Point r)
+int distance(coordinate p, coordinate q, coordinate r)
 {
   int x1 = p.x - q.x;
   int x2 = p.x - r.x;
   int y1 = p.y - q.y;
   int y2 = p.y - r.y;
 
-  int item1 = pow(y1,2) + pow(x1,2);
-  int item2 = pow(y2,2) + pow(x2,2);
+  int item1 = pow(y1, 2) + pow(x1, 2);
+  int item2 = pow(y2, 2) + pow(x2, 2);
 
-  if(item1 == item2)
-      return 0;
-  else if(item1 < item2)
-      return -1;
+  if (item1 == item2)
+    return 0;
+  else if (item1 < item2)
+    return -1;
   else
-      return 1;
+    return 1;
 }
 
-vector<Point> jarvisAlgorithm(Point points[], int n)
+vector<coordinate> jarvisAlgorithm(coordinate points[], int n)
 {
 
-  Point start = points[0];
-  vector<Point> outputHull;
+  coordinate start = points[0];
+  vector<coordinate> outputHull;
 
-  for (int i = 0; i < n; i++) {
-    if(points[i].x < start.x)
+  for (int i = 0; i < n; i++)
+  {
+    if (points[i].x < start.x)
       start = points[i];
   }
 
-  Point current = start;
+  coordinate current = start;
   outputHull.push_back(start);
 
-  vector<Point> *collinearPoints = new vector<Point>;
+  vector<coordinate> *collinearPoints = new vector<coordinate>;
 
-  while (true) {
-    Point nextPoint = points[0];
+  while (true)
+  {
+    coordinate nextPoint = points[0];
 
-    for (size_t i = 0; i < n; i++) {
-      if(points[i] == current)
+    for (size_t i = 0; i < n; i++)
+    {
+      if (points[i] == current)
         continue;
 
-      int val = crossProduct(current,nextPoint, points[i]);
+      int val = crossProduct(current, nextPoint, points[i]);
 
-        if (val < 0)
-        {
-            nextPoint = points[i];
-            collinearPoints = new vector<Point>;
-        }
+      if (val < 0)
+      {
+        nextPoint = points[i];
+        collinearPoints = new vector<coordinate>;
+      }
 
-        else if(val == 0)
+      else if (val == 0)
+      {
+        if (distance(current, nextPoint, points[i]) < 0)
         {
-            if (distance(current, nextPoint, points[i]) < 0) {
-              collinearPoints->push_back(nextPoint);
-              nextPoint = points[i];
-            }
-            else
-              collinearPoints->push_back(points[i]);
+          collinearPoints->push_back(nextPoint);
+          nextPoint = points[i];
         }
+        else
+          collinearPoints->push_back(points[i]);
+      }
     }
 
-    vector<Point>::iterator it;
+    vector<coordinate>::iterator it;
 
-    for(it = collinearPoints->begin(); it != collinearPoints->end(); it++) {
+    for (it = collinearPoints->begin(); it != collinearPoints->end(); it++)
+    {
       outputHull.push_back(*it);
     }
 
-    if(nextPoint == start)
-         break;
+    if (nextPoint == start)
+      break;
     outputHull.push_back(nextPoint);
     current = nextPoint;
   }
 
   return outputHull;
 }
+#endif
