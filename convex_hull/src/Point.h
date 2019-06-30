@@ -1,9 +1,10 @@
+template <typename T>
 struct Point{
-    double x, y;
+    T x, y;
 
     Point(){};
 
-    Point(double x, double y)
+    Point(T x, T y)
     {
         this->x = x;
         this->y = y;
@@ -11,9 +12,12 @@ struct Point{
 
     bool operator==(Point q)
     {
-         if(x == q.x && y == q.y)
-             return 1;
-        return 0;
+        return x == q.x && y == q.y;
+    }
+
+    friend std::ostream& operator<<(std::ostream& os, Point<T> p){
+        os<<p.x<<' '<<p.y;
+        return os;
     }
   //~Point();
 };
