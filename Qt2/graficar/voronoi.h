@@ -73,8 +73,12 @@ coordinate intersect(line a, line b)
     {
         double x = (b2 * c1 - b1 * c2) / determinant;
         double y = (a1 * c2 - a2 * c1) / determinant;
+        if (x == -0)
+            x = 0;
+        if (y == -0)
+            y = 0;
         coordinate returned(x, y);
-        if (doesIntersect(a, b, returned))
+        if (!doesIntersect(a, b, returned))
         {
             coordinate toret(MAXFLOAT, MAXFLOAT);
             return toret;
