@@ -1,10 +1,21 @@
 #include "voronoi.h"
 int main()
 {
-    coordinate one(-2, -2);
-    coordinate two(0, 0);
-    coordinate three(-3, 3);
-    coordinate four(-1, 1);
-    auto test = intersect(make_pair(one, two), make_pair(three, two));
-    test;
+    vector<coordinate> myvec1, myvec2;
+    coordinate myCoord(-1, 0);
+    coordinate myCoord2(-2, 1);
+    coordinate myCoord3(1, 3);
+    myvec1.push_back(myCoord);
+    myvec1.push_back(myCoord2);
+    myvec1.push_back(myCoord3);
+    auto hull1 = graham(myvec1);
+    coordinate myCoord4(2, 0);
+    coordinate myCoord5(3, -1);
+    coordinate myCoord6(4, 2);
+    myvec2.push_back(myCoord5);
+    myvec2.push_back(myCoord4);
+    myvec2.push_back(myCoord6);
+
+    auto hull2 = graham(myvec2);
+    auto LCS = lowerCommonSupportLine(hull1, hull2);
 }

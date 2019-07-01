@@ -17,6 +17,18 @@ typedef pair<coordinate, coordinate> line;
 //recorded runtime: nlog(n)<-- Asymptotic, Amortized
 
 //input: 2 convex hulls
+class vorLine
+{
+    coordinate first;
+    coordinate second;
+    coordinate *gen1;
+    coordinate *gen2;
+    vorLine(line a)
+    {
+        first = a.first;
+        second = a.second;
+    }
+};
 struct sortbyX
 {
 
@@ -133,7 +145,7 @@ line lowerCommonSupportLine(std::vector<coordinate> hull1, std::vector<coordinat
     coordinate rmost = hull1[lcsIndex1];
     //find leftmost in hull2
     coordinate lmost = hull2[lcsIndex2];
-    while (rmost.y < hull1[lcsIndex1 - 1].y)
+    while (rmost.y > hull1[lcsIndex1 - 1].y)
     {
         lcsIndex1--;
 
@@ -143,7 +155,7 @@ line lowerCommonSupportLine(std::vector<coordinate> hull1, std::vector<coordinat
             lcsIndex1 = hull1.size();
         }
     }
-    while (lmost.y < hull2[lcsIndex2 + 1].y)
+    while (lmost.y > hull2[lcsIndex2 + 1].y)
     {
         lcsIndex2++;
         lmost = hull2[lcsIndex2];
@@ -155,7 +167,7 @@ line lowerCommonSupportLine(std::vector<coordinate> hull1, std::vector<coordinat
     return (make_pair(rmost, lmost));
 }
 
-std::vector<line> mergeVoronoi(std::vector<line> vor1, std::vector<coordinate> generadores1, std::vector<line> vor2, std::vector<coordinate> generadores2)
+std::vector<vorLine> mergeVoronoi(std::vector<vorLine> vor1, std::vector<coordinate> generadores1, std::vector<vorLine> vor2, std::vector<coordinate> generadores2)
 {
     //step 1: Construct convex hulls of a and b
     std::vector<coordinate> generadoresNew;
@@ -172,17 +184,24 @@ std::vector<line> mergeVoronoi(std::vector<line> vor1, std::vector<coordinate> g
     coordinate wo = bisec.second;
     auto toEraseL = vor1.begin();
     auto toEraseR = vor2.begin();
+    //search for the intersect
     for (auto it = vor1.begin(); it != vor1.end(); it++)
     {
+        ;
+    }
+    //search for more intersect
+    for (auto it = vor2.begin(); it != vor2.end(); it++)
+    {
+        ;
     }
 
     int counter = 0;
 }
 
-std::vector<line> voronoi(std::vector<coordinate> veccoordinates)
+std::vector<vorLine> voronoi(std::vector<coordinate> veccoordinates)
 {
     int size = veccoordinates.size();
-    vector<line> vor1, vor2, vorMerge;
+    vector<vorLine> vor1, vor2, vorMerge;
     vector<coordinate> generadores1, generadores2;
     //TODO SORT veccoordinates so that leftmost coordinate is veccoordinates[0]; must homogenize thing VITAL
 
