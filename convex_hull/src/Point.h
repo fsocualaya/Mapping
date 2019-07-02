@@ -23,6 +23,6 @@ struct Point
         os << p.x << ' ' << p.y;
         return os;
     }
-    //~Point();
+    ~Point()= default;
 };
 #endif
