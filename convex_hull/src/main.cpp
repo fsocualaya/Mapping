@@ -32,7 +32,7 @@ int main(int argc, char const *argv[]) {
 */
 
 #include "parallelGraham.h"
-
+#include "randomPointsGenerator.h"
 
 int main(){
 
@@ -53,7 +53,7 @@ int main(){
 -76.9782, -12.2175
 -77.0169, -12.0853
      */
-
+/*
     pointsVector taxi = {{-77.0184, -12.1344},
                          {-77.0718, -12.0973},
                          {-76.9892, -12.0694},
@@ -83,8 +83,13 @@ int main(){
     for(auto&i:merge)
         std::cout<<i<<std::endl;
 
-
+*/
     //std::cout<<getExecutionTime(graham, auxMap);
+
+    pointsVector coordinates = generateCoordinates(-80,-70,-10,0,10);
+
+    for(auto&i:coordinates)
+        std::cout<<i<<std::endl;
 
     return 0;
 }
