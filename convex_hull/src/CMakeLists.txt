@@ -8,7 +8,6 @@ include_directories(.)
 add_executable(src
         convexHullTimer.h
         grahamScan.h
-        jarvis.h
         main.cpp
         Point.h randomPointsGenerator.h parallelGraham.h giftWrapping.h auxFunctions.h)
 

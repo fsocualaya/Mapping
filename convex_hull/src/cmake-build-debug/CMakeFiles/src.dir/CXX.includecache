@@ -34,25 +34,7 @@ Point.h
 auxFunctions.h
 /home/notpyxl/UTEC/undergraduate/5th/ADA/project/2_final/Mapping/convex_hull/src/auxFunctions.h
 
-/home/notpyxl/UTEC/undergraduate/5th/ADA/project/2_final/Mapping/convex_hull/src/jarvis.h
-iostream
--
-vector
--
-chrono
--
-iomanip
--
-cmath
--
-algorithm
--
-Point.h
-/home/notpyxl/UTEC/undergraduate/5th/ADA/project/2_final/Mapping/convex_hull/src/Point.h
-
 /home/notpyxl/UTEC/undergraduate/5th/ADA/project/2_final/Mapping/convex_hull/src/main.cpp
-jarvis.h
-/home/notpyxl/UTEC/undergraduate/5th/ADA/project/2_final/Mapping/convex_hull/src/jarvis.h
 parallelGraham.h
 /home/notpyxl/UTEC/undergraduate/5th/ADA/project/2_final/Mapping/convex_hull/src/parallelGraham.h
 randomPointsGenerator.h
@@ -65,12 +47,14 @@ algorithm
 -
 iostream
 -
-pthread.h
+thread
 -
 grahamScan.h
 /home/notpyxl/UTEC/undergraduate/5th/ADA/project/2_final/Mapping/convex_hull/src/grahamScan.h
 convexHullTimer.h
 /home/notpyxl/UTEC/undergraduate/5th/ADA/project/2_final/Mapping/convex_hull/src/convexHullTimer.h
+mutex
+-
 
 /home/notpyxl/UTEC/undergraduate/5th/ADA/project/2_final/Mapping/convex_hull/src/randomPointsGenerator.h
 grahamScan.h

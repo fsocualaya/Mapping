@@ -7,44 +7,58 @@
 
 #include <algorithm>
 #include <iostream>
-#include <pthread.h>
+#include <thread>
 #include "grahamScan.h"
 #include "convexHullTimer.h"
+#include <mutex>
+
+pointsVector leftHull;
+pointsVector rightHull;
+
+std::mutex mtx;
 
 bool isARightTurn(coordinate p, coordinate q, coordinate r){
     return getOrientation(p,q,r)<0;
 }
 
-pointsVector leftGraham(pointsVector &Map){
+void* leftGraham(const pointsVector &tmpMap){
+    leftHull = {};
+
+    pointsVector Map = tmpMap;
+
     sortPoints(Map);
     std::reverse(Map.begin()+1, Map.end());
-    pointsVector grahamHull;
-    grahamHull.push_back(Map[0]); grahamHull.push_back(Map[1]);
+
+    leftHull.push_back(Map[0]); leftHull.push_back(Map[1]);
     for(int i=2;i<=ceil(Map.size()/2.0);++i){ // < map.size() for entire hull
-        while(!isARightTurn(underTop(grahamHull), grahamHull[grahamHull.size()-1], Map[i]))
-            grahamHull.pop_back();
-        grahamHull.push_back(Map[i]);
+        while(!isARightTurn(underTop(leftHull), leftHull[leftHull.size()-1], Map[i]))
+            leftHull.pop_back();
+        leftHull.push_back(Map[i]);
     }
     //grahamHull.push_back(grahamHull[0]);
-    return grahamHull;
 }
 
-pointsVector rightGraham(pointsVector Map){
+void* rightGraham(const pointsVector& tmpMap){
+
+    rightHull = {};
+    pointsVector Map = tmpMap;
     sortPoints(Map);
-    pointsVector grahamHull;
-    grahamHull.push_back(Map[0]); grahamHull.push_back(Map[1]);
+    rightHull.push_back(Map[0]); rightHull.push_back(Map[1]);
     for(int i=2;i<=floor(Map.size()/2.0);++i){ // <Map.size() for entire hull
-        while(!isALeftTurn(underTop(grahamHull), grahamHull[grahamHull.size()-1], Map[i]))
-            grahamHull.pop_back();
-        grahamHull.push_back(Map[i]);
+        while(!isALeftTurn(underTop(rightHull), rightHull[rightHull.size()-1], Map[i]))
+            rightHull.pop_back();
+        rightHull.push_back(Map[i]);
     }
     //grahamHull.push_back(grahamHull[0]);
-    return grahamHull;
 }
 
-pointsVector parallelGraham(pointsVector &Map){
+pointsVector parallelGraham(const pointsVector &Map){
     pointsVector grahamHull;
-    pointsVector leftHull = leftGraham(Map), rightHull = rightGraham(Map);
+
+    std::thread t0(&leftGraham, std::ref(Map));
+    std::thread t1(&rightGraham, std::ref(Map));
+    t0.join();
+    t1.join();
 
     grahamHull.push_back(leftHull[0]);
 

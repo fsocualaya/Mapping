@@ -101,9 +101,6 @@
 		<Unit filename="/home/notpyxl/UTEC/undergraduate/5th/ADA/project/2_final/Mapping/convex_hull/src/grahamScan.h">
 			<Option target="src"/>
 		</Unit>
-		<Unit filename="/home/notpyxl/UTEC/undergraduate/5th/ADA/project/2_final/Mapping/convex_hull/src/jarvis.h">
-			<Option target="src"/>
-		</Unit>
 		<Unit filename="/home/notpyxl/UTEC/undergraduate/5th/ADA/project/2_final/Mapping/convex_hull/src/main.cpp">
 			<Option target="src"/>
 		</Unit>
