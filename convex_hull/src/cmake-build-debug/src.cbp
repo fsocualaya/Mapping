@@ -86,9 +86,6 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/notpyxl/UTEC/undergraduate/5th/ADA/project/2_final/Mapping/convex_hull/src/Chan.h">
-			<Option target="src"/>
-		</Unit>
 		<Unit filename="/home/notpyxl/UTEC/undergraduate/5th/ADA/project/2_final/Mapping/convex_hull/src/Point.h">
 			<Option target="src"/>
 		</Unit>
@@ -102,6 +99,9 @@
 			<Option target="src"/>
 		</Unit>
 		<Unit filename="/home/notpyxl/UTEC/undergraduate/5th/ADA/project/2_final/Mapping/convex_hull/src/main.cpp">
+			<Option target="src"/>
+		</Unit>
+		<Unit filename="/home/notpyxl/UTEC/undergraduate/5th/ADA/project/2_final/Mapping/convex_hull/src/parallelGraham.h">
 			<Option target="src"/>
 		</Unit>
 		<Unit filename="/home/notpyxl/UTEC/undergraduate/5th/ADA/project/2_final/Mapping/convex_hull/src/randomPointsGenerator.h">
