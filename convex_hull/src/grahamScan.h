@@ -2,7 +2,6 @@
 #define __COMMON_H__
 
 #include "Point.h"
-#include <stack>
 #include <vector>
 #include <cstdlib>
 #include <cmath>
@@ -18,7 +17,7 @@ void swap(coordinate &p, coordinate &q){
     q = tmp;
 }
 
-int getOrientation(coordinate p, coordinate q, coordinate r){
+double getOrientation(coordinate p, coordinate q, coordinate r){
     // Given a Matrix based on points p, q and r, the Orientation is the result of its determinant D.
     // D > 0, is a left turn
     // D == 0, is straight
@@ -40,14 +39,15 @@ int getBottomestPointPosition(pointsVector& Map) {
 double distanceSquare(coordinate &p1, coordinate &p2){
     return pow(p1.x-p2.x, 2) + pow(p1.y-p2.y, 2);
 }
+
 int compare(const void *vp1, const void *vp2){
     auto p = (coordinate*)vp1;
     auto q = (coordinate *)vp2;
 
-    int orientation = getOrientation(p0, *p, *q);
-    if(!orientation)
+    double orientation = getOrientation(p0, *p, *q);
+    if(orientation==0)
         return (distanceSquare(p0, *q) >= distanceSquare(p0, *p))? -1 : 1;
-    return orientation*-1;
+    return (orientation<0)?1:-1;
 }
 
 void sortPoints(pointsVector &Map){
@@ -73,12 +73,14 @@ pointsVector graham(pointsVector Map){
     sortPoints(Map);
     pointsVector grahamHull;
     grahamHull.push_back(Map[0]); grahamHull.push_back(Map[1]);
-    for(int i=2;i<Map.size();++i){
+    for(int i=2;i<Map.size();++i){ // <Map.size() for entire hull
         while(!isALeftTurn(underTop(grahamHull), grahamHull[grahamHull.size()-1], Map[i]))
             grahamHull.pop_back();
         grahamHull.push_back(Map[i]);
     }
-    grahamHull.push_back(grahamHull[0]);
+    //grahamHull.push_back(grahamHull[0]);
     return grahamHull;
 }
+
+
 #endif
