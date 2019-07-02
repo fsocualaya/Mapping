@@ -1,4 +1,4 @@
-# Install script for directory: /home/notpyxl/UTEC/undergraduate/5th/ADA/project/2_final/Mapping/convex_hull/src
+# Install script for directory: /home/bryan/proyecto/Mapping/convex_hull/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/notpyxl/UTEC/undergraduate/5th/ADA/project/2_final/Mapping/convex_hull/src/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/bryan/proyecto/Mapping/convex_hull/src/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

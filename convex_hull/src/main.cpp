@@ -34,6 +34,7 @@ int main(int argc, char const *argv[]) {
 #include "parallelGraham.h"
 #include "randomPointsGenerator.h"
 #include "giftWrapping.h"
+#include "simulation.h"
 
 int main(){
 
@@ -101,6 +102,9 @@ int main(){
 
     for(auto&i:giftWrapping(coordinates))
         std::cout<<i<<std::endl;
+
+    std::string tiempo;
+    generateCsv("../../docs/csv/tiempo");
 
     return 0;
 }

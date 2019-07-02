@@ -9,7 +9,7 @@
 #include <iostream>
 #include <pthread.h>
 #include "grahamScan.h"
-#include "convexHullTimer.h"
+
 
 bool isARightTurn(coordinate p, coordinate q, coordinate r){
     return getOrientation(p,q,r)<0;

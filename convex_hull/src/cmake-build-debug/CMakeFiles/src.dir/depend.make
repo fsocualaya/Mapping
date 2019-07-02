@@ -6,8 +6,8 @@ CMakeFiles/src.dir/main.cpp.o: ../auxFunctions.h
 CMakeFiles/src.dir/main.cpp.o: ../convexHullTimer.h
 CMakeFiles/src.dir/main.cpp.o: ../giftWrapping.h
 CMakeFiles/src.dir/main.cpp.o: ../grahamScan.h
-CMakeFiles/src.dir/main.cpp.o: ../jarvis.h
 CMakeFiles/src.dir/main.cpp.o: ../main.cpp
 CMakeFiles/src.dir/main.cpp.o: ../parallelGraham.h
 CMakeFiles/src.dir/main.cpp.o: ../randomPointsGenerator.h
+CMakeFiles/src.dir/main.cpp.o: ../simulation.h
 

@@ -6,5 +6,5 @@ CXX_FLAGS = -g   -std=gnu++14
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/notpyxl/UTEC/undergraduate/5th/ADA/project/2_final/Mapping/convex_hull/src/. 
+CXX_INCLUDES = -I/home/bryan/proyecto/Mapping/convex_hull/src/. 
 

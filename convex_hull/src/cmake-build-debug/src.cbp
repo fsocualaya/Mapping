@@ -8,33 +8,33 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/notpyxl/UTEC/undergraduate/5th/ADA/project/2_final/Mapping/convex_hull/src/cmake-build-debug"/>
+				<Option working_dir="/home/bryan/proyecto/Mapping/convex_hull/src/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/notpyxl/UTEC/undergraduate/5th/ADA/project/2_final/Mapping/convex_hull/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/notpyxl/UTEC/undergraduate/5th/ADA/project/2_final/Mapping/convex_hull/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/notpyxl/UTEC/undergraduate/5th/ADA/project/2_final/Mapping/convex_hull/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/notpyxl/UTEC/undergraduate/5th/ADA/project/2_final/Mapping/convex_hull/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/bryan/proyecto/Mapping/convex_hull/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/bryan/proyecto/Mapping/convex_hull/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/bryan/proyecto/Mapping/convex_hull/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/bryan/proyecto/Mapping/convex_hull/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/notpyxl/UTEC/undergraduate/5th/ADA/project/2_final/Mapping/convex_hull/src/cmake-build-debug"/>
+				<Option working_dir="/home/bryan/proyecto/Mapping/convex_hull/src/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/notpyxl/UTEC/undergraduate/5th/ADA/project/2_final/Mapping/convex_hull/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/notpyxl/UTEC/undergraduate/5th/ADA/project/2_final/Mapping/convex_hull/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/notpyxl/UTEC/undergraduate/5th/ADA/project/2_final/Mapping/convex_hull/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/notpyxl/UTEC/undergraduate/5th/ADA/project/2_final/Mapping/convex_hull/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/bryan/proyecto/Mapping/convex_hull/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/bryan/proyecto/Mapping/convex_hull/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/bryan/proyecto/Mapping/convex_hull/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/bryan/proyecto/Mapping/convex_hull/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="src">
-				<Option output="/home/notpyxl/UTEC/undergraduate/5th/ADA/project/2_final/Mapping/convex_hull/src/cmake-build-debug/src" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/notpyxl/UTEC/undergraduate/5th/ADA/project/2_final/Mapping/convex_hull/src/cmake-build-debug"/>
+				<Option output="/home/bryan/proyecto/Mapping/convex_hull/src/cmake-build-debug/src" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/bryan/proyecto/Mapping/convex_hull/src/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/notpyxl/UTEC/undergraduate/5th/ADA/project/2_final/Mapping/convex_hull/src/."/>
+					<Add directory="/home/bryan/proyecto/Mapping/convex_hull/src/."/>
 					<Add directory="/usr/include/c++/7"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
 					<Add directory="/usr/include/c++/7/backward"/>
@@ -45,20 +45,20 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/notpyxl/UTEC/undergraduate/5th/ADA/project/2_final/Mapping/convex_hull/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 src"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/notpyxl/UTEC/undergraduate/5th/ADA/project/2_final/Mapping/convex_hull/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/notpyxl/UTEC/undergraduate/5th/ADA/project/2_final/Mapping/convex_hull/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/notpyxl/UTEC/undergraduate/5th/ADA/project/2_final/Mapping/convex_hull/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/bryan/proyecto/Mapping/convex_hull/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 src"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/bryan/proyecto/Mapping/convex_hull/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/bryan/proyecto/Mapping/convex_hull/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/bryan/proyecto/Mapping/convex_hull/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="src/fast">
-				<Option output="/home/notpyxl/UTEC/undergraduate/5th/ADA/project/2_final/Mapping/convex_hull/src/cmake-build-debug/src" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/notpyxl/UTEC/undergraduate/5th/ADA/project/2_final/Mapping/convex_hull/src/cmake-build-debug"/>
+				<Option output="/home/bryan/proyecto/Mapping/convex_hull/src/cmake-build-debug/src" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/bryan/proyecto/Mapping/convex_hull/src/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/notpyxl/UTEC/undergraduate/5th/ADA/project/2_final/Mapping/convex_hull/src/."/>
+					<Add directory="/home/bryan/proyecto/Mapping/convex_hull/src/."/>
 					<Add directory="/usr/include/c++/7"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
 					<Add directory="/usr/include/c++/7/backward"/>
@@ -69,51 +69,48 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/notpyxl/UTEC/undergraduate/5th/ADA/project/2_final/Mapping/convex_hull/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 src/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/notpyxl/UTEC/undergraduate/5th/ADA/project/2_final/Mapping/convex_hull/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/notpyxl/UTEC/undergraduate/5th/ADA/project/2_final/Mapping/convex_hull/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/notpyxl/UTEC/undergraduate/5th/ADA/project/2_final/Mapping/convex_hull/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/bryan/proyecto/Mapping/convex_hull/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 src/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/bryan/proyecto/Mapping/convex_hull/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/bryan/proyecto/Mapping/convex_hull/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/bryan/proyecto/Mapping/convex_hull/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/notpyxl/UTEC/undergraduate/5th/ADA/project/2_final/Mapping/convex_hull/src/cmake-build-debug"/>
+				<Option working_dir="/home/bryan/proyecto/Mapping/convex_hull/src/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/notpyxl/UTEC/undergraduate/5th/ADA/project/2_final/Mapping/convex_hull/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/notpyxl/UTEC/undergraduate/5th/ADA/project/2_final/Mapping/convex_hull/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/notpyxl/UTEC/undergraduate/5th/ADA/project/2_final/Mapping/convex_hull/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/notpyxl/UTEC/undergraduate/5th/ADA/project/2_final/Mapping/convex_hull/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/bryan/proyecto/Mapping/convex_hull/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/bryan/proyecto/Mapping/convex_hull/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/bryan/proyecto/Mapping/convex_hull/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/bryan/proyecto/Mapping/convex_hull/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/notpyxl/UTEC/undergraduate/5th/ADA/project/2_final/Mapping/convex_hull/src/Point.h">
+		<Unit filename="/home/bryan/proyecto/Mapping/convex_hull/src/Point.h">
 			<Option target="src"/>
 		</Unit>
-		<Unit filename="/home/notpyxl/UTEC/undergraduate/5th/ADA/project/2_final/Mapping/convex_hull/src/auxFunctions.h">
+		<Unit filename="/home/bryan/proyecto/Mapping/convex_hull/src/auxFunctions.h">
 			<Option target="src"/>
 		</Unit>
-		<Unit filename="/home/notpyxl/UTEC/undergraduate/5th/ADA/project/2_final/Mapping/convex_hull/src/convexHullTimer.h">
+		<Unit filename="/home/bryan/proyecto/Mapping/convex_hull/src/convexHullTimer.h">
 			<Option target="src"/>
 		</Unit>
-		<Unit filename="/home/notpyxl/UTEC/undergraduate/5th/ADA/project/2_final/Mapping/convex_hull/src/giftWrapping.h">
+		<Unit filename="/home/bryan/proyecto/Mapping/convex_hull/src/giftWrapping.h">
 			<Option target="src"/>
 		</Unit>
-		<Unit filename="/home/notpyxl/UTEC/undergraduate/5th/ADA/project/2_final/Mapping/convex_hull/src/grahamScan.h">
+		<Unit filename="/home/bryan/proyecto/Mapping/convex_hull/src/grahamScan.h">
 			<Option target="src"/>
 		</Unit>
-		<Unit filename="/home/notpyxl/UTEC/undergraduate/5th/ADA/project/2_final/Mapping/convex_hull/src/jarvis.h">
+		<Unit filename="/home/bryan/proyecto/Mapping/convex_hull/src/main.cpp">
 			<Option target="src"/>
 		</Unit>
-		<Unit filename="/home/notpyxl/UTEC/undergraduate/5th/ADA/project/2_final/Mapping/convex_hull/src/main.cpp">
+		<Unit filename="/home/bryan/proyecto/Mapping/convex_hull/src/parallelGraham.h">
 			<Option target="src"/>
 		</Unit>
-		<Unit filename="/home/notpyxl/UTEC/undergraduate/5th/ADA/project/2_final/Mapping/convex_hull/src/parallelGraham.h">
+		<Unit filename="/home/bryan/proyecto/Mapping/convex_hull/src/randomPointsGenerator.h">
 			<Option target="src"/>
 		</Unit>
-		<Unit filename="/home/notpyxl/UTEC/undergraduate/5th/ADA/project/2_final/Mapping/convex_hull/src/randomPointsGenerator.h">
-			<Option target="src"/>
-		</Unit>
-		<Unit filename="/home/notpyxl/UTEC/undergraduate/5th/ADA/project/2_final/Mapping/convex_hull/src/CMakeLists.txt">
+		<Unit filename="/home/bryan/proyecto/Mapping/convex_hull/src/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

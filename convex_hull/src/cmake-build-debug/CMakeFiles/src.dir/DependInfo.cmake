@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/notpyxl/UTEC/undergraduate/5th/ADA/project/2_final/Mapping/convex_hull/src/main.cpp" "/home/notpyxl/UTEC/undergraduate/5th/ADA/project/2_final/Mapping/convex_hull/src/cmake-build-debug/CMakeFiles/src.dir/main.cpp.o"
+  "/home/bryan/proyecto/Mapping/convex_hull/src/main.cpp" "/home/bryan/proyecto/Mapping/convex_hull/src/cmake-build-debug/CMakeFiles/src.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

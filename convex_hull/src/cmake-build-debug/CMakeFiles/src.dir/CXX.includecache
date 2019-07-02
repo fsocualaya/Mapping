@@ -6,11 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/home/notpyxl/UTEC/undergraduate/5th/ADA/project/2_final/Mapping/convex_hull/src/Point.h
+/home/bryan/proyecto/Mapping/convex_hull/src/Point.h
 
-/home/notpyxl/UTEC/undergraduate/5th/ADA/project/2_final/Mapping/convex_hull/src/auxFunctions.h
+/home/bryan/proyecto/Mapping/convex_hull/src/auxFunctions.h
 Point.h
-/home/notpyxl/UTEC/undergraduate/5th/ADA/project/2_final/Mapping/convex_hull/src/Point.h
+/home/bryan/proyecto/Mapping/convex_hull/src/Point.h
 vector
 -
 cstdlib
@@ -18,49 +18,35 @@ cstdlib
 cmath
 -
 
-/home/notpyxl/UTEC/undergraduate/5th/ADA/project/2_final/Mapping/convex_hull/src/convexHullTimer.h
+/home/bryan/proyecto/Mapping/convex_hull/src/convexHullTimer.h
 ctime
 -
 grahamScan.h
-/home/notpyxl/UTEC/undergraduate/5th/ADA/project/2_final/Mapping/convex_hull/src/grahamScan.h
+/home/bryan/proyecto/Mapping/convex_hull/src/grahamScan.h
 
-/home/notpyxl/UTEC/undergraduate/5th/ADA/project/2_final/Mapping/convex_hull/src/giftWrapping.h
+/home/bryan/proyecto/Mapping/convex_hull/src/giftWrapping.h
 auxFunctions.h
-/home/notpyxl/UTEC/undergraduate/5th/ADA/project/2_final/Mapping/convex_hull/src/auxFunctions.h
+/home/bryan/proyecto/Mapping/convex_hull/src/auxFunctions.h
 
-/home/notpyxl/UTEC/undergraduate/5th/ADA/project/2_final/Mapping/convex_hull/src/grahamScan.h
+/home/bryan/proyecto/Mapping/convex_hull/src/grahamScan.h
 Point.h
-/home/notpyxl/UTEC/undergraduate/5th/ADA/project/2_final/Mapping/convex_hull/src/Point.h
+/home/bryan/proyecto/Mapping/convex_hull/src/Point.h
 auxFunctions.h
-/home/notpyxl/UTEC/undergraduate/5th/ADA/project/2_final/Mapping/convex_hull/src/auxFunctions.h
+/home/bryan/proyecto/Mapping/convex_hull/src/auxFunctions.h
 
-/home/notpyxl/UTEC/undergraduate/5th/ADA/project/2_final/Mapping/convex_hull/src/jarvis.h
-iostream
--
-vector
--
-chrono
--
-iomanip
--
-cmath
--
-algorithm
--
-Point.h
-/home/notpyxl/UTEC/undergraduate/5th/ADA/project/2_final/Mapping/convex_hull/src/Point.h
-
-/home/notpyxl/UTEC/undergraduate/5th/ADA/project/2_final/Mapping/convex_hull/src/main.cpp
+/home/bryan/proyecto/Mapping/convex_hull/src/main.cpp
 jarvis.h
-/home/notpyxl/UTEC/undergraduate/5th/ADA/project/2_final/Mapping/convex_hull/src/jarvis.h
+/home/bryan/proyecto/Mapping/convex_hull/src/jarvis.h
 parallelGraham.h
-/home/notpyxl/UTEC/undergraduate/5th/ADA/project/2_final/Mapping/convex_hull/src/parallelGraham.h
+/home/bryan/proyecto/Mapping/convex_hull/src/parallelGraham.h
 randomPointsGenerator.h
-/home/notpyxl/UTEC/undergraduate/5th/ADA/project/2_final/Mapping/convex_hull/src/randomPointsGenerator.h
+/home/bryan/proyecto/Mapping/convex_hull/src/randomPointsGenerator.h
 giftWrapping.h
-/home/notpyxl/UTEC/undergraduate/5th/ADA/project/2_final/Mapping/convex_hull/src/giftWrapping.h
+/home/bryan/proyecto/Mapping/convex_hull/src/giftWrapping.h
+simulation.h
+/home/bryan/proyecto/Mapping/convex_hull/src/simulation.h
 
-/home/notpyxl/UTEC/undergraduate/5th/ADA/project/2_final/Mapping/convex_hull/src/parallelGraham.h
+/home/bryan/proyecto/Mapping/convex_hull/src/parallelGraham.h
 algorithm
 -
 iostream
@@ -68,11 +54,25 @@ iostream
 pthread.h
 -
 grahamScan.h
-/home/notpyxl/UTEC/undergraduate/5th/ADA/project/2_final/Mapping/convex_hull/src/grahamScan.h
-convexHullTimer.h
-/home/notpyxl/UTEC/undergraduate/5th/ADA/project/2_final/Mapping/convex_hull/src/convexHullTimer.h
+/home/bryan/proyecto/Mapping/convex_hull/src/grahamScan.h
 
-/home/notpyxl/UTEC/undergraduate/5th/ADA/project/2_final/Mapping/convex_hull/src/randomPointsGenerator.h
+/home/bryan/proyecto/Mapping/convex_hull/src/randomPointsGenerator.h
 grahamScan.h
-/home/notpyxl/UTEC/undergraduate/5th/ADA/project/2_final/Mapping/convex_hull/src/grahamScan.h
+/home/bryan/proyecto/Mapping/convex_hull/src/grahamScan.h
+
+/home/bryan/proyecto/Mapping/convex_hull/src/simulation.h
+vector
+-
+fstream
+-
+string
+-
+convexHullTimer.h
+/home/bryan/proyecto/Mapping/convex_hull/src/convexHullTimer.h
+grahamScan.h
+/home/bryan/proyecto/Mapping/convex_hull/src/grahamScan.h
+randomPointsGenerator.h
+/home/bryan/proyecto/Mapping/convex_hull/src/randomPointsGenerator.h
+giftWrapping.h
+/home/bryan/proyecto/Mapping/convex_hull/src/giftWrapping.h
 
