@@ -1,0 +1,8 @@
+//
+// Created by notpyxl on 6/30/19.
+//
+
+#ifndef SRC_RANDOMPOINTSGENERATOR_H
+#define SRC_RANDOMPOINTSGENERATOR_H
+
+#endif //SRC_RANDOMPOINTSGENERATOR_H
