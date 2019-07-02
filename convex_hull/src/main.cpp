@@ -33,6 +33,7 @@ int main(int argc, char const *argv[]) {
 
 #include "parallelGraham.h"
 #include "randomPointsGenerator.h"
+#include "giftWrapping.h"
 
 int main(){
 
@@ -86,9 +87,19 @@ int main(){
 */
     //std::cout<<getExecutionTime(graham, auxMap);
 
-    pointsVector coordinates = generateCoordinates(-80,-70,-10,0,10);
+    pointsVector coordinates = generateCoordinates(-80,-70,-10,0,100);
 
     for(auto&i:coordinates)
+        std::cout<<i<<std::endl;
+
+    std::cout<<"-------------\n\n";
+
+    for(auto&i:graham(coordinates))
+        std::cout<<i<<std::endl;
+
+    std::cout<<"-------------\n\n";
+
+    for(auto&i:giftWrapping(coordinates))
         std::cout<<i<<std::endl;
 
     return 0;

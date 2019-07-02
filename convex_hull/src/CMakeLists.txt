@@ -10,7 +10,7 @@ add_executable(src
         grahamScan.h
         jarvis.h
         main.cpp
-        Point.h randomPointsGenerator.h parallelGraham.h)
+        Point.h randomPointsGenerator.h parallelGraham.h giftWrapping.h auxFunctions.h)
 
 TARGET_LINK_LIBRARIES( src
         pthread

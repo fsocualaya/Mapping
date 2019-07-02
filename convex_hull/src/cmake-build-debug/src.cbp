@@ -89,7 +89,13 @@
 		<Unit filename="/home/notpyxl/UTEC/undergraduate/5th/ADA/project/2_final/Mapping/convex_hull/src/Point.h">
 			<Option target="src"/>
 		</Unit>
+		<Unit filename="/home/notpyxl/UTEC/undergraduate/5th/ADA/project/2_final/Mapping/convex_hull/src/auxFunctions.h">
+			<Option target="src"/>
+		</Unit>
 		<Unit filename="/home/notpyxl/UTEC/undergraduate/5th/ADA/project/2_final/Mapping/convex_hull/src/convexHullTimer.h">
+			<Option target="src"/>
+		</Unit>
+		<Unit filename="/home/notpyxl/UTEC/undergraduate/5th/ADA/project/2_final/Mapping/convex_hull/src/giftWrapping.h">
 			<Option target="src"/>
 		</Unit>
 		<Unit filename="/home/notpyxl/UTEC/undergraduate/5th/ADA/project/2_final/Mapping/convex_hull/src/grahamScan.h">

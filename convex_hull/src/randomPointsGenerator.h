@@ -7,6 +7,10 @@
 
 #include "grahamScan.h"
 
+void initRandom(){
+    srand(time(nullptr));
+}
+
 double randdouble()
 {
     return rand()/(double(RAND_MAX)+1);
@@ -21,6 +25,7 @@ double randdouble(double min, double max)
 }
 
 pointsVector generateCoordinates(double minLat, double maxLat, double minLon, double maxLon, int n){
+    initRandom();
     pointsVector coordinates;
     for(int i=0;i<n;++i){
         coordinate coord(randdouble(minLat,maxLat),randdouble(minLon,maxLon));
