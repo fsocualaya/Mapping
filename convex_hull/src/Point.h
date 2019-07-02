@@ -1,5 +1,8 @@
+#ifndef POINT_H
+#define POINT_H
 template <typename T>
-struct Point{
+struct Point
+{
     T x, y;
 
     Point(){};
@@ -15,9 +18,11 @@ struct Point{
         return x == q.x && y == q.y;
     }
 
-    friend std::ostream& operator<<(std::ostream& os, Point<T> p){
-        os<<p.x<<' '<<p.y;
+    friend std::ostream &operator<<(std::ostream &os, Point<T> p)
+    {
+        os << p.x << ' ' << p.y;
         return os;
     }
-  //~Point();
+    //~Point();
 };
+#endif
