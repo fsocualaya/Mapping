@@ -41,6 +41,8 @@ randomPointsGenerator.h
 /home/notpyxl/UTEC/undergraduate/5th/ADA/project/2_final/Mapping/convex_hull/src/randomPointsGenerator.h
 giftWrapping.h
 /home/notpyxl/UTEC/undergraduate/5th/ADA/project/2_final/Mapping/convex_hull/src/giftWrapping.h
+simulation.h
+/home/notpyxl/UTEC/undergraduate/5th/ADA/project/2_final/Mapping/convex_hull/src/simulation.h
 
 /home/notpyxl/UTEC/undergraduate/5th/ADA/project/2_final/Mapping/convex_hull/src/parallelGraham.h
 algorithm
@@ -53,10 +55,24 @@ grahamScan.h
 /home/notpyxl/UTEC/undergraduate/5th/ADA/project/2_final/Mapping/convex_hull/src/grahamScan.h
 convexHullTimer.h
 /home/notpyxl/UTEC/undergraduate/5th/ADA/project/2_final/Mapping/convex_hull/src/convexHullTimer.h
-mutex
--
 
 /home/notpyxl/UTEC/undergraduate/5th/ADA/project/2_final/Mapping/convex_hull/src/randomPointsGenerator.h
 grahamScan.h
 /home/notpyxl/UTEC/undergraduate/5th/ADA/project/2_final/Mapping/convex_hull/src/grahamScan.h
+
+/home/notpyxl/UTEC/undergraduate/5th/ADA/project/2_final/Mapping/convex_hull/src/simulation.h
+vector
+-
+fstream
+-
+string
+-
+convexHullTimer.h
+/home/notpyxl/UTEC/undergraduate/5th/ADA/project/2_final/Mapping/convex_hull/src/convexHullTimer.h
+grahamScan.h
+/home/notpyxl/UTEC/undergraduate/5th/ADA/project/2_final/Mapping/convex_hull/src/grahamScan.h
+randomPointsGenerator.h
+/home/notpyxl/UTEC/undergraduate/5th/ADA/project/2_final/Mapping/convex_hull/src/randomPointsGenerator.h
+giftWrapping.h
+/home/notpyxl/UTEC/undergraduate/5th/ADA/project/2_final/Mapping/convex_hull/src/giftWrapping.h
 

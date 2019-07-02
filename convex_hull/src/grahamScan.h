@@ -1,5 +1,5 @@
-#ifndef __COMMON_H__
-#define __COMMON_H__
+#ifndef SRC_GRAHAM_H
+#define SRC_GRAHAM_H
 
 #include "Point.h"
 #include "auxFunctions.h"

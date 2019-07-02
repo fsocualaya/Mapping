@@ -1,3 +1,6 @@
+#ifndef SRC_CONVEXHULLTIMER_H
+#define SRC_CONVEXHULLTIMER_H
+
 #include <ctime>
 #include "grahamScan.h"
 
@@ -8,3 +11,5 @@ double getExecutionTime(pointsVector (*convexHullAlgorithm)(pointsVector), point
     double duration = (std::clock()-start)/(double) CLOCKS_PER_SEC;
     return duration;
 }
+
+#endif

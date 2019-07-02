@@ -10,12 +10,10 @@
 #include <thread>
 #include "grahamScan.h"
 #include "convexHullTimer.h"
-#include <mutex>
 
 pointsVector leftHull;
 pointsVector rightHull;
 
-std::mutex mtx;
 
 bool isARightTurn(coordinate p, coordinate q, coordinate r){
     return getOrientation(p,q,r)<0;
