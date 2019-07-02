@@ -78,7 +78,7 @@ pointsVector graham(pointsVector Map){
             grahamHull.pop_back();
         grahamHull.push_back(Map[i]);
     }
-    //grahamHull.push_back(grahamHull[0]);
+    grahamHull.push_back(grahamHull[0]);
     return grahamHull;
 }
 
