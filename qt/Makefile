@@ -234,6 +234,7 @@ DIST          = ../../../../Felgo/Felgo/gcc_64/mkspecs/features/spec_pre.prf \
 		../../../../Felgo/Felgo/gcc_64/mkspecs/features/qt_config.prf \
 		../../../../Felgo/Felgo/gcc_64/mkspecs/linux-g++/qmake.conf \
 		../../../../Felgo/Felgo/gcc_64/mkspecs/features/spec_post.prf \
+		.qmake.stash \
 		../../../../Felgo/Felgo/gcc_64/mkspecs/features/exclusive_builds.prf \
 		../../../../Felgo/Felgo/gcc_64/mkspecs/features/toolchain.prf \
 		../../../../Felgo/Felgo/gcc_64/mkspecs/features/default_pre.prf \
@@ -258,6 +259,7 @@ DIST          = ../../../../Felgo/Felgo/gcc_64/mkspecs/features/spec_pre.prf \
 		graph.h \
 		read.h \
 		node.h \
+		voronoi.h \
 		voronoi.h main.cpp \
 		circulo.cpp \
 		myThread.cpp
@@ -441,6 +443,7 @@ Makefile: ADA-1.pro ../../../../Felgo/Felgo/gcc_64/mkspecs/linux-g++/qmake.conf 
 		../../../../Felgo/Felgo/gcc_64/mkspecs/features/qt_config.prf \
 		../../../../Felgo/Felgo/gcc_64/mkspecs/linux-g++/qmake.conf \
 		../../../../Felgo/Felgo/gcc_64/mkspecs/features/spec_post.prf \
+		.qmake.stash \
 		../../../../Felgo/Felgo/gcc_64/mkspecs/features/exclusive_builds.prf \
 		../../../../Felgo/Felgo/gcc_64/mkspecs/features/toolchain.prf \
 		../../../../Felgo/Felgo/gcc_64/mkspecs/features/default_pre.prf \
@@ -640,6 +643,7 @@ Makefile: ADA-1.pro ../../../../Felgo/Felgo/gcc_64/mkspecs/linux-g++/qmake.conf 
 ../../../../Felgo/Felgo/gcc_64/mkspecs/features/qt_config.prf:
 ../../../../Felgo/Felgo/gcc_64/mkspecs/linux-g++/qmake.conf:
 ../../../../Felgo/Felgo/gcc_64/mkspecs/features/spec_post.prf:
+.qmake.stash:
 ../../../../Felgo/Felgo/gcc_64/mkspecs/features/exclusive_builds.prf:
 ../../../../Felgo/Felgo/gcc_64/mkspecs/features/toolchain.prf:
 ../../../../Felgo/Felgo/gcc_64/mkspecs/features/default_pre.prf:
@@ -685,7 +689,7 @@ distdir: FORCE
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents qml.qrc qmake_qmake_immediate.qrc $(DISTDIR)/
 	$(COPY_FILE) --parents ../../../../Felgo/Felgo/gcc_64/mkspecs/features/data/dummy.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents grafoaqt.h circulo.h myThread.h graph.h read.h node.h voronoi.h $(DISTDIR)/
+	$(COPY_FILE) --parents grafoaqt.h circulo.h myThread.h graph.h read.h node.h voronoi.h voronoi.h $(DISTDIR)/
 	$(COPY_FILE) --parents main.cpp circulo.cpp myThread.cpp $(DISTDIR)/
 
 

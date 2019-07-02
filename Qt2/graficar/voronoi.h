@@ -23,6 +23,7 @@ class vorLine
     coordinate second;
     coordinate *gen1;
     coordinate *gen2;
+
     vorLine(line a)
     {
         first = a.first;
