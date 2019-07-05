@@ -19,7 +19,8 @@
 #include <QFileInfo>
 #include<chrono>
 #include"../../Mapping/convex_hull/src/grahamScan.h"
-#define nNodos 5
+#include "../../Mapping/convex_hull/src/giftWrapping.h"
+#define nNodos 100
 #define nodoini 4362423164
 #define distMax 100000
 #ifndef LAVAINA
@@ -36,21 +37,26 @@ int main(int argc, char *argv[])
     rd gg;
     gg.getGraph(&g1);
     g1.iniciar_taxis(nNodos);
+    vector<coordinate> pepe;
+    coordinate myCoord;
 
+    double myx,myy;
+    for (int i = 0;i<nNodos;i++) {
+        myx =g1.taxistas[i]->get_x();
+        myy =g1.taxistas[i]->get_y();
+        myCoord.y = myx;
+        myCoord.x = myy;
+        pepe.push_back(myCoord);
+    }
 
+    auto myGraham = giftWrapping(pepe);
     QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
     QGuiApplication app(argc, argv);
     QQmlApplicationEngine engine;
     QGeoPath geopath;
-
-
-
-
-
-    for (list<Node<Graph<Traits>>*>::iterator  j = lista.begin(); j != lista.end(); ++j) {
-        geopath.addCoordinate(QGeoCoordinate((*j)->get_y(), (*j)->get_x()));
+    for (auto  j = myGraham.begin(); j != myGraham.end(); ++j) {
+        geopath.addCoordinate(QGeoCoordinate((*j).x, (*j).y));
     }
-
     engine.rootContext()->setContextProperty("geopath", QVariant::fromValue(geopath));
     engine.load(QUrl::fromLocalFile(QFileInfo("main.qml").absoluteFilePath()));
     QQmlComponent component(&engine,QUrl::fromLocalFile(QFileInfo("main.qml").absoluteFilePath()));
