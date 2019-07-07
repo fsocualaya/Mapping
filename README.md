@@ -1,6 +1,6 @@
 # Mapping
 
-<img src="img/hull.png" height="50">
+<img src="img/hull.png" height="300">
 
 ## Features 
 * Convex Hull   
