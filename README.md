@@ -1,19 +1,17 @@
+<style>
+    img{
+        height: 50%;
+    }
+</style>
+
 # Mapping
 
-## TODO
+![](img/hull.png)
 
-- Convex Hull 
-    * [ ] Jarvis algorithm
-    * [ ] Graham Scan
-    * [ ] Quick Hull
-    
-    [comment]: <> (Kirckpatrick and Seidel's algorithm)
-    [comment]: <> (Randomized Algorithms)
-
-- Voronoi Diagram
-    * [ ] Worst Case
-    * [ ] Mid Case
-    * [ ] Best Case
+## Features 
+* Convex Hull   
+    - Jarvis algorithm
+    - Graham Scan 
 
 ## Dev Team
 - Ian Arias(@ian-ariassch)

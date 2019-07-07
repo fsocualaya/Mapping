@@ -238,6 +238,7 @@ DIST          = /home/notpyxl/Qt/5.12.3/gcc_64/mkspecs/features/spec_pre.prf \
 		/home/notpyxl/Qt/5.12.3/gcc_64/mkspecs/features/qt_config.prf \
 		/home/notpyxl/Qt/5.12.3/gcc_64/mkspecs/linux-g++/qmake.conf \
 		/home/notpyxl/Qt/5.12.3/gcc_64/mkspecs/features/spec_post.prf \
+		../qt/.qmake.stash \
 		/home/notpyxl/Qt/5.12.3/gcc_64/mkspecs/features/exclusive_builds.prf \
 		/home/notpyxl/Qt/5.12.3/gcc_64/mkspecs/features/toolchain.prf \
 		/home/notpyxl/Qt/5.12.3/gcc_64/mkspecs/features/default_pre.prf \
@@ -450,6 +451,7 @@ Makefile: ../qt/ADA-1.pro /home/notpyxl/Qt/5.12.3/gcc_64/mkspecs/linux-g++/qmake
 		/home/notpyxl/Qt/5.12.3/gcc_64/mkspecs/features/qt_config.prf \
 		/home/notpyxl/Qt/5.12.3/gcc_64/mkspecs/linux-g++/qmake.conf \
 		/home/notpyxl/Qt/5.12.3/gcc_64/mkspecs/features/spec_post.prf \
+		.qmake.stash \
 		/home/notpyxl/Qt/5.12.3/gcc_64/mkspecs/features/exclusive_builds.prf \
 		/home/notpyxl/Qt/5.12.3/gcc_64/mkspecs/features/toolchain.prf \
 		/home/notpyxl/Qt/5.12.3/gcc_64/mkspecs/features/default_pre.prf \
@@ -653,6 +655,7 @@ Makefile: ../qt/ADA-1.pro /home/notpyxl/Qt/5.12.3/gcc_64/mkspecs/linux-g++/qmake
 /home/notpyxl/Qt/5.12.3/gcc_64/mkspecs/features/qt_config.prf:
 /home/notpyxl/Qt/5.12.3/gcc_64/mkspecs/linux-g++/qmake.conf:
 /home/notpyxl/Qt/5.12.3/gcc_64/mkspecs/features/spec_post.prf:
+.qmake.stash:
 /home/notpyxl/Qt/5.12.3/gcc_64/mkspecs/features/exclusive_builds.prf:
 /home/notpyxl/Qt/5.12.3/gcc_64/mkspecs/features/toolchain.prf:
 /home/notpyxl/Qt/5.12.3/gcc_64/mkspecs/features/default_pre.prf:
