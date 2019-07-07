@@ -2,13 +2,14 @@
 #define VORONOI_H
 #include <vector>
 #include <algorithm>
-#include "../../qt/graph.h"
+//#include "../../qt/graph.h"
 #include "../../convex_hull/src/jarvis.h"
 #include "../../convex_hull/src/grahamScan.h"
 #define upperLim 10
 #define lowerLim 0
 #define rightLim 10
 #define leftLim 0
+typedef pair<coordinate, coordinate> line;
 
 //#include "../convex_hull/src/graham.h"
 //based on http://www.personal.kent.edu/~rmuhamma/Compgeometry/MyCG/Voronoi/DivConqVor/divConqVor.htm
@@ -16,18 +17,19 @@
 //recorded runtime: nlog(n)<-- Asymptotic, Amortized
 
 //input: 2 convex hulls
-
-pair<coordinate, coordinate> bisect(pair<coordinate, coordinate> myPair)
+class vorLine
 {
-    auto x = (myPair.first.x + myPair.second.x) / 2;
-    auto y = (myPair.first.y + myPair.second.y) / 2;
-    coordinate init(x, y);
-    float pendiente = (myPair.first.y - myPair.second.y) / (myPair.first.x - myPair.second.x);
-    float b = init.y - pendiente * init.x;
-    float bottomx = (lowerLim - b) / pendiente;
-    coordinate end(bottomx, lowerLim);
-    return (make_pair(init, end));
-}
+    coordinate first;
+    coordinate second;
+    coordinate *gen1;
+    coordinate *gen2;
+
+    vorLine(line a)
+    {
+        first = a.first;
+        second = a.second;
+    }
+};
 struct sortbyX
 {
 
@@ -36,14 +38,92 @@ struct sortbyX
         return (coordinate1.x < coordinate2.x);
     }
 };
-pair<coordinate, coordinate> lowerCommonSupportLine(std::vector<coordinate> hull1, std::vector<coordinate> hull2)
+
+inline bool onSegment(coordinate p, coordinate q, coordinate r)
+{
+    if (q.x <= max(p.x, r.x) && q.x >= min(p.x, r.x) && q.y <= max(p.y, r.y) && q.y >= min(p.y, r.y))
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+inline bool doesIntersect(line a, line b, coordinate c)
+{
+    if (onSegment(a.first, a.second, c) && onSegment(b.first, b.second, c))
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+coordinate intersect(line a, line b)
+{
+    coordinate A = a.first;
+    coordinate B = a.second;
+    coordinate C = b.first;
+    coordinate D = b.second;
+
+    double a1 = B.y - A.y;
+    double b1 = A.x - B.x;
+    double c1 = a1 * (A.x) + b1 * (A.y);
+    double a2 = D.y - C.y;
+    double b2 = C.x - D.x;
+    double c2 = a2 * (C.x) + b2 * (C.y);
+
+    double determinant = a1 * b2 - a2 * b1;
+
+    if (determinant == 0)
+    {
+        coordinate toret(MAXFLOAT, MAXFLOAT);
+        return toret;
+    }
+    else
+    {
+        double x = (b2 * c1 - b1 * c2) / determinant;
+        double y = (a1 * c2 - a2 * c1) / determinant;
+        if (x == -0)
+            x = 0;
+        if (y == -0)
+            y = 0;
+        coordinate returned(x, y);
+        if (!doesIntersect(a, b, returned))
+        {
+            coordinate toret(MAXFLOAT, MAXFLOAT);
+            return toret;
+        }
+
+        return returned;
+    }
+}
+
+pair<coordinate, coordinate> bisect(pair<coordinate, coordinate> myPair)
+{
+    auto x = (myPair.first.x + myPair.second.x) / 2;
+    auto y = (myPair.first.y + myPair.second.y) / 2;
+    coordinate init(x, y);
+    float pendiente = (myPair.first.y - myPair.second.y) / (myPair.first.x - myPair.second.x);
+    float b = init.y - pendiente * init.x;
+    if (pendiente == 0)
+        exit(EXIT_FAILURE);
+
+    float bottomx = (lowerLim - b) / pendiente;
+    coordinate end(bottomx, lowerLim);
+    return (make_pair(init, end));
+}
+
+line lowerCommonSupportLine(std::vector<coordinate> hull1, std::vector<coordinate> hull2)
 {
     //step 1:find the vertex in hull1 with the highest x(Rightmost)
     //there is an O(log n) algorithm for finding the common support by Overmars and Leevwen. But since this sub-problem is not a bottleneck of the total time complexity, following O(n) algorithm is quite enough.
     //mal; chequear que tengo que hacer palos indices
-    long index1, index2;
-    index1 = 0;
-    index2 = 0;
+    long lcsIndex1, lcsIndex2;
+    lcsIndex1 = 0;
+    lcsIndex2 = 0;
     double max, min;
     max = 0;
     min = MAXFLOAT;
@@ -52,7 +132,7 @@ pair<coordinate, coordinate> lowerCommonSupportLine(std::vector<coordinate> hull
         if (hull1[i].x > max)
         {
             max = hull1[i].x;
-            index1 = i;
+            lcsIndex1 = i;
         }
     }
     for (int j = 0; j < hull2.size(); ++j)
@@ -60,57 +140,84 @@ pair<coordinate, coordinate> lowerCommonSupportLine(std::vector<coordinate> hull
         if (hull2[j].x < min)
         {
             min = hull2[j].x;
-            index2 = j;
+            lcsIndex2 = j;
         }
     }
-    coordinate rmost = hull1[index1];
+    coordinate rmost = hull1[lcsIndex1];
     //find leftmost in hull2
-    coordinate lmost = hull2[index2];
-    while (rmost.y < hull1[index1 - 1].y)
+    coordinate lmost = hull2[lcsIndex2];
+    while (rmost.y > hull1[lcsIndex1 - 1].y)
     {
-        index1--;
+        lcsIndex1--;
 
-        rmost = hull1[index1];
-        if (index1 == 0)
+        rmost = hull1[lcsIndex1];
+        if (lcsIndex1 == 0)
         {
-            index1 = hull1.size();
+            lcsIndex1 = hull1.size();
         }
     }
-    while (lmost.y < hull2[index2 + 1].y)
+    while (lmost.y > hull2[lcsIndex2 + 1].y)
     {
-        index2++;
-        lmost = hull2[index2];
-        if (index2 == hull2.size() - 1)
+        lcsIndex2++;
+        lmost = hull2[lcsIndex2];
+        if (lcsIndex2 == hull2.size() - 1)
         {
-            index2 = -1;
+            lcsIndex2 = -1;
         }
     }
     return (make_pair(rmost, lmost));
 }
 
-std::vector<std::vector<coordinate>> mergeVoronoi(std::vector<std::vector<coordinate>> vor1, std::vector<std::vector<coordinate>> vor2)
+std::vector<vorLine> mergeVoronoi(std::vector<vorLine> vor1, std::vector<coordinate> generadores1, std::vector<vorLine> vor2, std::vector<coordinate> generadores2)
 {
-    ;
+    //step 1: Construct convex hulls of a and b
+    std::vector<coordinate> generadoresNew;
+    generadoresNew.reserve(generadores1.size() + generadores2.size());
+    generadoresNew.insert(generadoresNew.end(), generadores1.begin(), generadores1.end());
+    generadoresNew.insert(generadoresNew.end(), generadores2.begin(), generadores2.end());
+    auto hull1 = graham(generadores1);
+    auto hull2 = graham(generadores2);
+    line LCS = lowerCommonSupportLine(hull1, hull2);
+    coordinate pl = LCS.first;
+    coordinate pr = LCS.second;
+    line bisec = bisect(LCS);
+    //w0 is the downwards INTERSECTION WITH INFINITY
+    coordinate wo = bisec.second;
+    auto toEraseL = vor1.begin();
+    auto toEraseR = vor2.begin();
+    //search for the intersect
+    for (auto it = vor1.begin(); it != vor1.end(); it++)
+    {
+        ;
+    }
+    //search for more intersect
+    for (auto it = vor2.begin(); it != vor2.end(); it++)
+    {
+        ;
+    }
+
+    int counter = 0;
 }
 
-std::vector<std::vector<coordinate>> voronoi(std::vector<coordinate> veccoordinates, const graph &g)
+std::vector<vorLine> voronoi(std::vector<coordinate> veccoordinates)
 {
     int size = veccoordinates.size();
-    vector<vector<coordinate>> vor1, vor2, vorMerge;
-    vector<coordinate> split1, split2;
+    vector<vorLine> vor1, vor2, vorMerge;
+    vector<coordinate> generadores1, generadores2;
     //TODO SORT veccoordinates so that leftmost coordinate is veccoordinates[0]; must homogenize thing VITAL
+
     std::sort(veccoordinates.begin(), veccoordinates.end(), sortbyX());
     for (int i = 0; i < size / 2; i++)
     {
-        split1.push_back(veccoordinates[i]);
+        generadores1.push_back(veccoordinates[i]);
     }
     for (int j = size / 2; j < size; j++)
     {
-        split2.push_back(veccoordinates[j]);
+        generadores2.push_back(veccoordinates[j]);
     }
-    vor1 = voronoi(split1, g);
-    vor2 = voronoi(split2, g);
-    vorMerge = mergeVoronoi(vor1, vor2);
+    vor1 = voronoi(generadores1);
+    vor2 = voronoi(generadores2);
+    vorMerge = mergeVoronoi(vor1, generadores1, vor2, generadores2);
     return vorMerge;
 }
 

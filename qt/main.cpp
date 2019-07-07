@@ -18,7 +18,9 @@
 #include <QMutex>
 #include <QFileInfo>
 #include<chrono>
-#define nNodos 5
+#include"../../Mapping/convex_hull/src/grahamScan.h"
+#include "../../Mapping/convex_hull/src/giftWrapping.h"
+#define nNodos 100
 #define nodoini 4362423164
 #define distMax 100000
 #ifndef LAVAINA
@@ -35,48 +37,26 @@ int main(int argc, char *argv[])
     rd gg;
     gg.getGraph(&g1);
     g1.iniciar_taxis(nNodos);
+    vector<coordinate> pepe;
+    coordinate myCoord;
 
+    double myx,myy;
+    for (int i = 0;i<nNodos;i++) {
+        myx =g1.taxistas[i]->get_x();
+        myy =g1.taxistas[i]->get_y();
+        myCoord.y = myx;
+        myCoord.x = myy;
+        pepe.push_back(myCoord);
+    }
 
+    auto myGraham = giftWrapping(pepe);
     QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
     QGuiApplication app(argc, argv);
     QQmlApplicationEngine engine;
     QGeoPath geopath;
-
-
-    auto ResultadosEstrella = g1.A_Star(nodoini,g1.buscar_taxista(0)->nodo->get());
-   // auto ResultadosEstrella = g1.A_Star(nodoini,1432901632);
-    auto lista=ResultadosEstrella.second;
-    //empiezo los threads
-    QAtomicInt agregador=1;
-    int numeroNodos = nNodos;
-    QMutex mutex;
-    vector<myThread *> misthreads;
-    double menor =  2147483647;
-    auto start = high_resolution_clock::now();
-    for (int i = 0; i < numThreads; ++i) {
-        myThread * ptrThread =new myThread(g1, &menor,&lista,&agregador,numeroNodos,&mutex);
-        misthreads.push_back(ptrThread);
-        misthreads[i]->start();
+    for (auto  j = myGraham.begin(); j != myGraham.end(); ++j) {
+        geopath.addCoordinate(QGeoCoordinate((*j).x, (*j).y));
     }
-    auto finish = high_resolution_clock::now();
-    auto durationParallel = duration_cast<microseconds>(finish-start);
-
-    for (int i = 0; i < numThreads; ++i){
-        misthreads[i]->wait();
-    }
-   cout<<"Tiempo tomado por A* Paralelo con "<<numeroNodos<<" taxis : "<<durationParallel.count()<<" microseconds"<<endl;
-    for(int j=1;j<nNodos;j++){
-      ResultadosEstrella = g1.A_Star(nodoini,g1.buscar_taxista(j)->nodo->get());
-        if(ResultadosEstrella.first<menor){
-            menor=ResultadosEstrella.first;
-            lista=ResultadosEstrella.second;
-       }
-    }
-
-    for (list<Node<Graph<Traits>>*>::iterator  j = lista.begin(); j != lista.end(); ++j) {
-        geopath.addCoordinate(QGeoCoordinate((*j)->get_y(), (*j)->get_x()));
-    }
-
     engine.rootContext()->setContextProperty("geopath", QVariant::fromValue(geopath));
     engine.load(QUrl::fromLocalFile(QFileInfo("main.qml").absoluteFilePath()));
     QQmlComponent component(&engine,QUrl::fromLocalFile(QFileInfo("main.qml").absoluteFilePath()));
